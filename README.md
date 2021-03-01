@@ -1,4 +1,6 @@
-![codesnap-hero-img](/src/assets/codesnap-hero.png)
+<p align="center">
+  <img src="/src/assets/codesnap-hero.png" width="500" >
+</p>
 
 A web application that allows users to add snippets of code inside a text field right in on the webpage. Users can then apply styling and snap a screenshot for socials.
 
@@ -24,7 +26,7 @@ Social platform of sharing code snippets between users. Social aspect to the app
 ## Project Resources
 * [Auto-grow text area](https://css-tricks.com/the-cleanest-trick-for-autogrowing-textareas/)
 * [Example Website](https://codetogo.io/)
-* [<pre> Tag MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre)
-* [<pre> Tag W3](https://www.w3schools.com/tags/tag_pre.asp)
-* [<code> Tag MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code)
+* [pre Tag MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre)
+* [pre Tag W3](https://www.w3schools.com/tags/tag_pre.asp)
+* [code Tag MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code)
 * [Copy Text to Clipboard](https://www.30secondsofcode.org/blog/s/copy-text-to-clipboard-with-javascript)
