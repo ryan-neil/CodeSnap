@@ -27,3 +27,4 @@ Social platform of sharing code snippets between users. Social aspect to the app
 * [<pre> Tag MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre)
 * [<pre> Tag W3](https://www.w3schools.com/tags/tag_pre.asp)
 * [<code> Tag MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code)
+* [Copy Text to Clipboard](https://www.30secondsofcode.org/blog/s/copy-text-to-clipboard-with-javascript)
