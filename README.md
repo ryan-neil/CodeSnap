@@ -17,7 +17,7 @@ Users will be able to change the main background color of the site to whatever t
 
 ## 📂 Project Structure
 `/src/` contains the source files for the app, as well as app config files. \
-`/src/js/` contains the JavaScript of the app.
+`/src/js/` contains the JavaScript of the app. \
 `/src/assets/` contains images for the app and repo.
 
 ## 💡 Ideas
