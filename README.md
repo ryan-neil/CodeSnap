@@ -1,4 +1,4 @@
-![codesnap-img](image-link.jpg)
+![codesnap-hero-img](/src/assets/codesnap-hero.png)
 
 A web application that allows users to add snippets of code inside a text field right in on the webpage. Users can then apply styling and snap a screenshot for socials.
 
