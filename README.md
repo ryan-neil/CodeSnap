@@ -31,7 +31,7 @@ Social platform of sharing code snippets between users. Social aspect to the app
 * [code Tag MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code)
 * [Copy Text to Clipboard](https://www.30secondsofcode.org/blog/s/copy-text-to-clipboard-with-javascript)
 
-highlight.js:
+highlight.js: 
 * [highlight.js Usage](https://highlightjs.org/usage/)
 * [highlight.js Docs](https://highlightjs.readthedocs.io/en/latest/)
 
