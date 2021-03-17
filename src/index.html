@@ -1,69 +1,74 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<!-- Meta -->
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<!-- Fonts -->
-		<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
+<head>
+	<!-- [Meta] -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- [Fonts] -->
+	<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
 
-		<title>CodeSnap</title>
-		<!-- CSS -->
-		<link rel="stylesheet" href="style.css">
-	</head>
-	<body>
+	<title>CodeSnap</title>
+	<!-- [CSS] -->
+	<link rel="stylesheet" href="style.css">
+	<!-- [JS] -->
+	<script src="/js/app.js"></script>
+</head>
 
-		<!-- [Navbar] -->
-		<header>
-			<div class="navbar">
-				<div class="navbar-container">
-					<div class="nav__item nav__logo">
-						<a href="#">Code<span class="logo-style">Snap</span></a>
-					</div>
-					<div class="nav__item nav__share"></div>
+<body>
+
+	<!-- [Navbar] -->
+	<header>
+		<div class="navbar">
+			<div class="navbar-container">
+				<div class="nav__item nav__logo">
+					<a href="#">Code<span class="logo-style">Snap</span></a>
+				</div>
+				<div class="nav__item nav__share"></div>
+			</div>
+		</div>
+	</header>
+
+	<!-- [Body] -->
+	<section id="body">
+		<div class="body-container">
+			<div class="input-box-wrapper">
+				<!-- 3 Dots -->
+				<div class="input-box__item dots">
+					<!-- Dot 1 -->
+					<div class="input-item__dot red"></div>
+					<!-- Dot 2 -->
+					<div class="input-item__dot yellow"></div>
+					<!-- Dot 3 -->
+					<div class="input-item__dot green"></div>
+				</div>
+				<!-- Input Field -->
+				<div class="input-box__item grow-wrap">
+					<textarea name="text" id="text-editor" placeholder="Paste code here..."
+						onInput="this.parentNode.dataset.replicatedValue = this.value"></textarea>
 				</div>
 			</div>
-		</header>
+		</div>
+		<!-- [Links] -->
+		<!-- <div class="body-links">
 
-		<!-- [Body] -->
-		<section id="body">
-			<div class="body-container">
-				<div class="input-box-wrapper">
-					<!-- 3 Dots -->
-					<div class="input-box__item dots">
-						<!-- Dot 1 -->
-						<div class="input-item__dot red"></div>
-						<!-- Dot 2 -->
-						<div class="input-item__dot yellow"></div>
-						<!-- Dot 3 -->
-						<div class="input-item__dot green"></div>
-					</div>
-					<!-- Input Field -->
-					<div class="input-box__item input-field"></div>
-				</div>
-			</div>
-			<!-- [Links] -->
-			<!-- <div class="body-links">
-				
 				<div class="links">
 					<a href="#">Copy code</a>
 				</div>
-				
+
 				<div class="links">
 					<a href="#">Share code</a>
 				</div>
-				
+
 				<div class="links">
 					<a href="#">Save code</a>
 				</div>
 			</div> -->
-		</section>
+	</section>
 
-		
+</body>
 
-	</body>
 </html>

@@ -18,6 +18,7 @@ Colors
 	--primary-color-yellow: #ffbd32;
 	--input-header: #1b1e2c;
 	--input-box: #272c36;
+	--input-box-text: #666d98;
 	--white: #ffffff;
 	--light: #f7f9fd;
 	--color1: #c86de0;
@@ -65,9 +66,13 @@ body {
 	/* height: 100vh; */
 
 	background-color: var(--primary-color-yellow);
+	/* background-color: #fff; */
 }
 a {
 	text-decoration: none;
+}
+label {
+	display: block;
 }
 
 /* 
@@ -102,6 +107,7 @@ a {
 	color: var(--input-header);
 	opacity: .9;
 }
+/* Snap text gradient color */
 .logo-style {
 	/* background: -webkit-linear-gradient(
 		43deg,
@@ -127,21 +133,23 @@ a {
 .body-container {
 	height: 100vh;
 	margin: auto;
+	padding: 1rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 .input-box-wrapper {
 	width: 40rem;
-	height: 220px;
+	height: auto;
 	background-color: var(--input-box);
 	border-radius: 5px;
 
 	/* offset-x | offset-y | blur-radius | spread-radius | color */
-	box-shadow: 6px 8px 35px 6px #362e0088;
+	box-shadow: 0 25.6px 57.6px 0 rgba(0, 0, 0, .22),
+		0 4.8px 14.4px 0 rgba(0, 0, 0, .18);
 }
 .input-box__item.dots {
-	padding: .4rem;
+	padding: .5rem;
 	display: flex;
 	align-items: center;
 	background-color: var(--input-header);
@@ -149,9 +157,9 @@ a {
 }
 .input-item__dot {
 	padding: 7px;
-	margin: 5px;
+	justify-content: flex-start;
+	margin-right: 7.5px;
 	border-radius: 6px;
-	/* background-color: var(--light); */
 }
 .input-item__dot.red {
 	background-color: var(--dot-color-red);
@@ -161,6 +169,49 @@ a {
 }
 .input-item__dot.green {
 	background-color: var(--dot-color-green);
+}
+
+/* 
+======================
+Textarea Styles:
+*/
+.grow-wrap {
+	/* easy way to plop the elements on top of each other and have them both sized based on the tallest one's height */
+	padding: .5rem;
+	display: grid;
+	font: 1rem/1.4 system-ui, sans-serif;
+}
+.grow-wrap::after {
+	/* Note the weird space! Needed to preventy jumpy behavior */
+	content: attr(data-replicated-value) " ";
+
+	/* This is how textarea text behaves */
+	white-space: pre-wrap;
+
+	/* Hidden from view, clicks, and screen readers */
+	visibility: hidden;
+}
+.grow-wrap > textarea {
+	/* You could leave this, but after a user resizes, then it ruins the auto sizing */
+	resize: none;
+
+	/* Firefox shows scrollbar on growth, you can hide like this. */
+	overflow: hidden;
+}
+.grow-wrap > textarea,
+.grow-wrap::after {
+	/* Identical styling required!! */
+	min-height: 200px;
+	border: none;
+	background-color: var(--input-box);
+	padding: 0.5rem;
+	font: inherit;
+	color: var(--input-box-text);
+	caret-color: var(--input-box-text);
+	outline: none;
+
+	/* Place on top of each other */
+	grid-area: 1 / 1 / 2 / 2;
 }
 
 /* 
