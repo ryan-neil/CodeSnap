@@ -32,12 +32,12 @@ Features:
 - [ ] Customize background color.
 - [ ] Toggle styles (box shadow, line numbering, header, etc.).
 - [ ] Customize font families.
-- [ ] Copy code button in text editor.
+- [ ] Copy code button in text editor. \
 Design:
 - [ ] 3 Main buttons: "Save/Export image" [png and svg options] (Select window or auto select window), "Styles", "Share code snippet" (Twitter, Instagram, etc.)
-- [ ] Need to figure out where to add main buttons to webpage (background color, font, styles, etc.).
+- [ ] Need to figure out where to add main buttons to webpage (background color, font, styles, etc.). \
 Build:
-- [ ] Task.
+- [ ] Task. \
 App Road-map:
 - [ ] Implement social aspect to app.
 - [ ] Allow users to save other users' code snippets.
