@@ -25,32 +25,29 @@ A quick look at the files and directories you'll see in the repo.
     1. **`/js`**: This directory contains all JavaScript in the repo.
         1. **`/components`**: This directory contains all JavaScript files and components files.
 
-## Todo
-- features
-  - [ ] implement codemirror.
-  - [ ] implement react codemirror2.
-  - [ ] auto resize textarea.
-  - [ ] customize background color.
-  - [ ] customize font.
-  - [ ] customize font.
-- design
-  - [ ] buttons in top right of screen (background color, font, styles, etc.)
-- build
-  - [ ] task
-- code
-  - [ ] task
-- social
-  - [ ] social aspect of app.
-  - [ ] save other users' code snippets.
-  - [ ] share code snippets between users.
-- future
-  - [ ] social aspect to app.
+## ✅ Todo
+Features:
+- [x] Implement CodeMirror.
+- [x] Auto resize textarea.
+- [ ] Customize background color.
+- [ ] Toggle styles (box shadow, line numbering, header, etc.).
+- [ ] Customize font families.
+- [ ] Copy code button in text editor.
+Design:
+- [ ] 3 Main buttons: "Save/Export image" [png and svg options] (Select window or auto select window), "Styles", "Share code snippet" (Twitter, Instagram, etc.)
+- [ ] Need to figure out where to add main buttons to webpage (background color, font, styles, etc.).
+Build:
+- [ ] Task.
+App Road-map:
+- [ ] Implement social aspect to app.
+- [ ] Allow users to save other users' code snippets.
+- [ ] Share code snippets between users and social media accounts.
 
-### Ideas
+### 🤔 Ideas
 1. Pasting code into center box.
 1. Change main page background.
 1. Toggle the header on and off as an option.
-1. 3 Main buttons: "Save image" [jpg,png,etc.] (Select window?), "Copy code", "Share code snippet" (Twitter, Instagram, etc.)
+1. 
 1. "Share us" button in the header
 1. Future update will allow user to change theme of text styling.
 1. Maybe a Firefox/Chrome extension.
