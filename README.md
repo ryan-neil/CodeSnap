@@ -17,6 +17,10 @@ A quick look at the files and directories you'll see in the repo.
       ├── repo image files
     └── js
       ├── components
+        ├── buttons
+        ├── editor
+        ├── navbar
+        ├── select-bars
       └── app.js
 ```
 
@@ -37,15 +41,15 @@ Features:
 Design:
 - [ ] Add side nav bar with functionality.
 - [ ] Side navbar functions:
-    - Export button.
-    - Theme bar.
-    - Language bar.
-    - Styles toggles.
-        - Box shadow toggle.
-        - Line numbering toggle.
-        - Header toggle.
-    - Background color picker.
-    - Share snippet (Twitter, Instagram, etc.)
+    - [ ] Export button.
+    - [ ] Theme select bar.
+    - [ ] Language select bar.
+    - [ ] Styles toggles.
+        - [ ] Box shadow toggle.
+        - [ ] Line numbering toggle.
+        - [ ] Header toggle.
+    - [ ] Background color picker.
+    - [ ] Share snippet (Twitter, Instagram, etc.)
 
 Build:
 - [x] Auto resize textarea.
