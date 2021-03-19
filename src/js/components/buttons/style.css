@@ -1,0 +1,96 @@
+/* font-family: 'Lobster', cursive;
+font-family: 'Satisfy', cursive;
+font-family: 'Quicksand', sans-serif; */
+
+:root {
+	/* Portfolio Colors */
+	--primary-color-blue: #0479f1;
+	--primary-color-yellow: #ffbd32;
+	--input-header: #1b1e2c;
+	--input-box: #272c36;
+	--input-box-text: #a5abd0;
+	--white: #ffffff;
+	--light: #f7f9fd;
+	--color1: #c86de0;
+	--color2: #ff6eb3;
+	--color3: #ff9181;
+	--color4: #f9f871;
+	--color5: #e43661;
+	/* Box Shadow */
+	--box-shadow: #2b2d34;
+	/* Typography Colors */
+	--p-text: #2e2e2e;
+	--h-text: #181818;
+	--btn-text: #181818;
+	--p-text-dark: #fff3ec;
+	--h-text-dark: #fffffe;
+	--btn-text-dark: #fffffe;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	background-color: var(--light);
+}
+
+/* 
+==========================
+[Button] Style
+==========================
+*/
+.container {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.btn {
+	font-family: 'Quicksand', sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	padding: .5rem 1rem;
+	background-color: var(--primary-color-blue);
+	border: none;
+	border-radius: 0.3rem;
+	box-shadow: 0 0 2px -1px var(--box-shadow),
+		0 2px 9px -5px var(--box-shadow);
+	transition: .2s;
+}
+.btn__text {
+	font-size: 1rem;
+	background: none;
+	color: var(--white);
+	cursor: pointer;
+	border: none;
+}
+.btn__text:hover {
+	opacity: .8;
+}
+.btn__icon {
+	width: 1.4rem;
+	fill: var(--white);
+	background: none;
+	color: var(--white);
+	cursor: pointer;
+	border: none;
+}
+.btn__icon:hover {
+	opacity: .8;
+}
+.vertical-line {
+	width: 1px;
+	margin: 0 1rem;
+	background-color: var(--white);
+	height: 22px;
+	opacity: .8;
+}
+
+/* 
+=================================
+[Section] Responsive Media
+=================================
+*/

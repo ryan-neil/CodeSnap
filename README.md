@@ -28,37 +28,47 @@ A quick look at the files and directories you'll see in the repo.
 ## ✅ Todo
 Features:
 - [x] Implement CodeMirror.
-- [x] Auto resize textarea.
 - [ ] Customize background color.
 - [ ] Toggle styles (box shadow, line numbering, header, etc.).
 - [ ] Customize font families.
+- [ ] Custom code editor themes.
 - [ ] Copy code button in text editor.
 
 Design:
-- [ ] 3 Main buttons: "Save/Export image" [png and svg options] (Select window or auto select window), "Styles", "Share code snippet" (Twitter, Instagram, etc.)
-- [ ] Need to figure out where to add main buttons to webpage (background color, font, styles, etc.).
+- [ ] Add side nav bar with functionality.
+- [ ] Side navbar functions:
+    - Export button.
+    - Theme bar.
+    - Language bar.
+    - Styles toggles.
+        - Box shadow toggle.
+        - Line numbering toggle.
+        - Header toggle.
+    - Background color picker.
+    - Share snippet (Twitter, Instagram, etc.)
 
 Build:
-- [ ] Task.
+- [x] Auto resize textarea.
+- [ ] Side functionality bar.
+- [ ] Navigation bar icons dropdown effect (stripe).
 
 App Road-map:
 - [ ] Implement social aspect to app.
 - [ ] Allow users to save other users' code snippets.
 - [ ] Share code snippets between users and social media accounts.
 
-### 🤔 Ideas
-1. Pasting code into center box.
-1. Change main page background.
-1. Toggle the header on and off as an option.
-1. 
-1. "Share us" button in the header
-1. Future update will allow user to change theme of text styling.
-1. Maybe a Firefox/Chrome extension.
-
 ## 🔗 Project Resources
-* [CodeMirror](https://codemirror.net/)
+CodeMirror:
+* [CodeMirror User Manual](https://codemirror.net/doc/manual.html)
 * [CodeMirror Setup Guide](https://www.youtube.com/watch?v=o1DDWQDBT9Y)
-* [react CodeMirror2](https://www.npmjs.com/package/react-codemirror2)
+
+Color Picker:
+* [Customize ColorPicker in JavaScript](https://ej2.syncfusion.com/javascript/documentation/color-picker/how-to/customize-colorpicker/)
+* [input type color](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/color)
+* [Color Picker Tutorial 1](https://www.youtube.com/watch?v=RSbZJYVQmPU)
+* [Color Picker Tutorial 2](https://www.youtube.com/watch?v=DP9-CVgkgDA)
+* [Input Type Color Tutorial](https://www.youtube.com/watch?v=eIw-Nou9L9E)
+
 * [Auto-grow text area](https://css-tricks.com/the-cleanest-trick-for-autogrowing-textareas/)
 * [pre Tag MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre)
 * [pre Tag W3](https://www.w3schools.com/tags/tag_pre.asp)

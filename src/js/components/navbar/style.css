@@ -1,0 +1,87 @@
+/* font-family: 'Lobster', cursive;
+font-family: 'Satisfy', cursive;
+font-family: 'Quicksand', sans-serif; */
+
+:root {
+	/* Portfolio Colors */
+	--primary-color-blue: #0479f1;
+	--primary-color-yellow: #ffbd32;
+	--input-header: #1b1e2c;
+	--input-box: #272c36;
+	--input-box-text: #a5abd0;
+	--white: #ffffff;
+	--light: #f7f9fd;
+	--color1: #c86de0;
+	--color2: #ff6eb3;
+	--color3: #ff9181;
+	--color4: #f9f871;
+	--color5: #e43661;
+	--logo-gradient: linear-gradient(
+		43deg,
+		#4158d0 0%,
+		#c850c0 46%,
+		#ffcc70 100%
+	);
+	/* Typography Colors */
+	--p-text: #2e2e2e;
+	--h-text: #181818;
+	--btn-text: #181818;
+	--p-text-dark: #fff3ec;
+	--h-text-dark: #fffffe;
+	--btn-text-dark: #fffffe;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Quicksand', sans-serif;
+	background-color: var(--primary-color-yellow);
+}
+a {
+	text-decoration: none;
+}
+
+/* 
+==========================
+[Navbar] Section
+==========================
+*/
+.navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+.navbar-container {
+	max-width: 75rem;
+	margin: auto;
+	padding: 1.2rem 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.nav__logo {
+	font-family: 'Lobster', sans-serif;
+	font-size: 2rem;
+	transition: 0.1s ease-in;
+}
+.nav__logo:hover {
+	opacity: 0.9;
+}
+.nav__logo a {
+	color: var(--input-header);
+	opacity: .9;
+}
+
+/* 
+=================================
+[Code Editor] Responsive Media
+=================================
+*/
+@media (max-width: 32rem) {
+	/* Some code... */
+}

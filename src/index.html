@@ -7,15 +7,23 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- [Fonts] -->
-	<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
 
 	<title>CodeSnap</title>
 	<!-- [CSS] -->
 	<link rel="stylesheet" href="style.css">
 	<!-- [JS] -->
-	<script src="/js/app.js"></script>
+	<script src="js/app.js" defer></script>
+	<!-- [CodeMirror Code Editor] -->
+	<script src="js/components/editor/lib/editor.js"></script>
+	<link href="js/components/editor/lib/editor.css" rel="stylesheet" />
+	<!-- [Language] -->
+	<script src="js/components/editor/mode/javascript/javascript.js"></script>
+	<!-- [Theme] -->
+	<link href="js/components/editor/theme/material-palenight.css" rel="stylesheet" />
+
 </head>
 
 <body>
@@ -36,39 +44,38 @@
 	<section id="body">
 		<div class="body-container">
 			<div class="input-box-wrapper">
-				<!-- 3 Dots -->
-				<div class="input-box__item dots">
+				<!-- Code Editor Header -->
+				<div class="input-box__item header">
 					<!-- Dot 1 -->
-					<div class="input-item__dot red"></div>
+					<div class="input-item__dots red"></div>
 					<!-- Dot 2 -->
-					<div class="input-item__dot yellow"></div>
+					<div class="input-item__dots yellow"></div>
 					<!-- Dot 3 -->
-					<div class="input-item__dot green"></div>
+					<div class="input-item__dots green"></div>
 				</div>
-				<!-- Input Field -->
-				<div class="input-box__item grow-wrap">
+				<!-- Code Editor Input Field -->
+				<div class="input-box__item body">
 					<textarea name="text" id="text-editor" placeholder="Paste code here..."
 						onInput="this.parentNode.dataset.replicatedValue = this.value"></textarea>
 				</div>
 			</div>
 		</div>
-		<!-- [Links] -->
-		<!-- <div class="body-links">
-
-				<div class="links">
-					<a href="#">Copy code</a>
-				</div>
-
-				<div class="links">
-					<a href="#">Share code</a>
-				</div>
-
-				<div class="links">
-					<a href="#">Save code</a>
-				</div>
-			</div> -->
 	</section>
 
+
+	<!-- <script>
+		const editor = CodeMirror.fromTextArea(
+			document.getElementById('text-editor'),
+			{
+				mode: 'javascript',
+				theme: 'material-palenight',
+				lineNumbers: true,
+				tabSize: 2,
+				lineWrapping: true,
+				scrollbarStyle: null
+			}
+		);
+	</script> -->
 </body>
 
 </html>
