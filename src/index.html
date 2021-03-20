@@ -13,7 +13,8 @@
 
 	<title>CodeSnap</title>
 	<!-- [CSS] -->
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="/src/js/components/theme.css" />
 	<!-- [JS] -->
 	<script src="js/app.js" defer></script>
 	<!-- [CodeMirror Code Editor] -->
@@ -27,55 +28,73 @@
 </head>
 
 <body>
+	<div class="project-container">
 
-	<!-- [Navbar] -->
-	<header>
-		<div class="navbar">
-			<div class="navbar-container">
-				<div class="nav__item nav__logo">
-					<a href="#">Code<span class="logo-style">Snap</span></a>
+		<!-- [Main Body] -->
+		<div class="main-body-container">
+			<!-- [Navbar] -->
+			<header>
+				<div class="navbar">
+					<div class="navbar-container">
+						<div class="nav__item nav__logo">
+							<span>CodeSnap</span>
+						</div>
+						<div class="nav__item nav__share"></div>
+					</div>
 				</div>
-				<div class="nav__item nav__share"></div>
-			</div>
+			</header>
+
+			<!-- [Body] -->
+			<section id="body">
+				<div class="body-container">
+					<div class="input-box-wrapper">
+						<!-- Code Editor Header -->
+						<div class="input-box__item header">
+							<!-- Dot 1 -->
+							<div class="input-item__dots red"></div>
+							<!-- Dot 2 -->
+							<div class="input-item__dots yellow"></div>
+							<!-- Dot 3 -->
+							<div class="input-item__dots green"></div>
+						</div>
+						<!-- Code Editor Input Field -->
+						<div class="input-box__item body">
+							<textarea name="text" id="text-editor" placeholder="Paste code here..."
+								onInput="this.parentNode.dataset.replicatedValue = this.value"></textarea>
+						</div>
+					</div>
+				</div>
+			</section>
 		</div>
-	</header>
 
-	<!-- [Body] -->
-	<section id="body">
-		<div class="body-container">
-			<div class="input-box-wrapper">
-				<!-- Code Editor Header -->
-				<div class="input-box__item header">
-					<!-- Dot 1 -->
-					<div class="input-item__dots red"></div>
-					<!-- Dot 2 -->
-					<div class="input-item__dots yellow"></div>
-					<!-- Dot 3 -->
-					<div class="input-item__dots green"></div>
-				</div>
-				<!-- Code Editor Input Field -->
-				<div class="input-box__item body">
-					<textarea name="text" id="text-editor" placeholder="Paste code here..."
-						onInput="this.parentNode.dataset.replicatedValue = this.value"></textarea>
-				</div>
+		<!-- [Side Nav] -->
+		<div class="side-nav">
+			<!-- CTA Button -->
+			<div class="btn cta">
+				<button class="btn__text">Export</button>
+				<div class="vertical-line"></div>
+				<button class="btn__icon">
+					<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+						x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+						<style type="text/css">
+							.st0 {
+								fill: none;
+							}
+						</style>
+						<g>
+							<rect class="st0" width="24" height="24" />
+						</g>
+						<g>
+							<path
+								d="M18,15v3H6v-3H4v3c0,1.1,0.9,2,2,2h12c1.1,0,2-0.9,2-2v-3H18z M17,11l-1.4-1.4L13,12.2V4h-2v8.2L8.4,9.6L7,11l5,5L17,11z" />
+						</g>
+					</svg>
 			</div>
+			<!-- Theme Header -->
+			<h2 class="nav-heading">Theme</h2>
 		</div>
-	</section>
 
-
-	<!-- <script>
-		const editor = CodeMirror.fromTextArea(
-			document.getElementById('text-editor'),
-			{
-				mode: 'javascript',
-				theme: 'material-palenight',
-				lineNumbers: true,
-				tabSize: 2,
-				lineWrapping: true,
-				scrollbarStyle: null
-			}
-		);
-	</script> -->
+	</div>
 </body>
 
 </html>

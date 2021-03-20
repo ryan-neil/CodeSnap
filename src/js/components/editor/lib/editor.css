@@ -7,7 +7,6 @@
 .CodeMirror pre.CodeMirror-line-like {
 	padding: 0 4px; /* Horizontal padding of content */
 }
-
 .CodeMirror-scrollbar-filler,
 .CodeMirror-gutter-filler {
 	background-color: white; /* The little square between H and V scrollbars */
@@ -29,7 +28,6 @@
 	color: #999;
 	white-space: nowrap;
 }
-
 .CodeMirror-guttermarker {
 	color: black;
 }
@@ -101,12 +99,10 @@
 /* Can style cursor different in overwrite (non-insert) mode */
 .CodeMirror-overwrite .CodeMirror-cursor {
 }
-
 .cm-tab {
 	display: inline-block;
 	text-decoration: inherit;
 }
-
 .CodeMirror-rulers {
 	position: absolute;
 	left: 0;
@@ -149,7 +145,6 @@
 .cm-strikethrough {
 	text-decoration: line-through;
 }
-
 .cm-s-default .cm-keyword {
 	color: #708;
 }
