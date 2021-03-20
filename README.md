@@ -41,7 +41,7 @@ Features:
 Design:
 - [ ] Add side nav bar with functionality.
 - [ ] Side navbar functions:
-    - [ ] Export button.
+    - [ ] Export button ("Export" exports to png. Icon drop down list of png and svg).
     - [ ] Theme select bar.
     - [ ] Language select bar.
     - [ ] Styles toggles.
@@ -72,7 +72,6 @@ Color Picker:
 * [Color Picker Tutorial 1](https://www.youtube.com/watch?v=RSbZJYVQmPU)
 * [Color Picker Tutorial 2](https://www.youtube.com/watch?v=DP9-CVgkgDA)
 * [Input Type Color Tutorial](https://www.youtube.com/watch?v=eIw-Nou9L9E)
-
 * [Auto-grow text area](https://css-tricks.com/the-cleanest-trick-for-autogrowing-textareas/)
 * [pre Tag MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre)
 * [pre Tag W3](https://www.w3schools.com/tags/tag_pre.asp)
