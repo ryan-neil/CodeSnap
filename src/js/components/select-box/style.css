@@ -1,0 +1,106 @@
+/* font-family: 'Lobster', cursive;
+font-family: 'Satisfy', cursive;
+font-family: 'Quicksand', sans-serif; */
+
+:root {
+	/* Portfolio Colors */
+	--color-primary: #ffbd32;
+	--color-primary-light: #ffd271;
+	--color-secondary: #1b1e2c;
+	--color-secondary-light: #272d41;
+	--white: #ffffff;
+	--light: #f7f9fd;
+	--nav-col-gradient: ;
+
+	--box-shadow: #2b2d34;
+	/* 3 Dots */
+	--color-dot-red: #ff5e57;
+	--color-dot-yellow: #febc2e;
+	--color-dot-green: #27c840;
+	/* Typography */
+	--font-size-sm: 0.875rem;
+	--font-size-base: 1rem;
+	--font-size-md: 1.0625rem;
+	--font-size-lg: 1.25rem;
+	--font-size-xl: 2.25rem;
+	--line-height-xs: calc(16 / 14);
+	--line-height-md: calc(27 / 17);
+	--line-height-lg: 1.35;
+	--line-height-xl: 1.25;
+	--color-text-primary: #ffffff;
+	--color-text-secondary: #b3b3b3;
+	--color-text-select: var(--color-text-secondary);
+	--color-btn-cta: linear-gradient(
+		180deg,
+		#ffcb5c 10%,
+		var(--color-primary) 45%
+	);
+	--color-btn-select: linear-gradient(
+		180deg,
+		#2f354b 10%,
+		var(--color-secondary) 45%
+	);
+	--color-select-bg: var(--color-secondary);
+	--color-select-border: #3f4558;
+	--code-editor-text: #a5abd0;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-family: 'Quicksand', sans-serif;
+}
+body {
+	background-color: var(--light);
+}
+
+.container {
+	height: 100vh;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+/* 
+=================================
+[Select Box]
+=================================
+*/
+.custom-select {
+	position: relative;
+	padding-right: 1rem;
+}
+select {
+	font-size: var(--font-size-md);
+	color: var(--color-text-secondary);
+	padding: .5rem 1rem;
+	background-image: var(--color-btn-select);
+	/* background: var(--color-secondary-light); */
+	border: 1px solid var(--color-select-border);
+	border-radius: 0.3rem;
+	box-shadow: 0 0 2px -1px var(--box-shadow),
+		0 2px 9px -5px var(--box-shadow);
+	transition: .2s;
+	cursor: pointer;
+}
+.custom-arrow {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: block;
+	background-image: var(--color-btn-select);
+	border: 1px solid var(--color-select-border);
+	border-radius: 0 0.3rem 0.3rem 0;
+	height: 100%;
+	width: 2.6rem;
+	pointer-events: none;
+	cursor: pointer;
+}
+.select-icon {
+	fill: var(--color-text-secondary);
+	cursor: pointer;
+}

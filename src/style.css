@@ -20,13 +20,19 @@ Colors
 	--color-secondary-light: #272d41;
 	--white: #ffffff;
 	--light: #f7f9fd;
-	--nav-col-gradient: ;
-	--cta-gradient: ;
+	--nav-col-gradient: linear-gradient(
+		180deg,
+		var(--color-secondary-light) 50%,
+		#272d41 100%
+	);
 	--box-shadow: #2b2d34;
 	/* 3 Dots */
 	--color-dot-red: #ff5e57;
 	--color-dot-yellow: #febc2e;
 	--color-dot-green: #27c840;
+	/* Toggle */
+	--color-toggle-on: #4ade80;
+	--color-toggle-off: #f87171;
 	/* Typography */
 	--font-size-sm: 0.875rem;
 	--font-size-base: 1rem;
@@ -40,8 +46,18 @@ Colors
 	--color-text-primary: #ffffff;
 	--color-text-secondary: #b3b3b3;
 	--color-text-select: var(--color-text-secondary);
+	--color-btn-cta: linear-gradient(
+		180deg,
+		#ffcb5c 10%,
+		var(--color-primary) 45%
+	);
+	--color-btn-select: linear-gradient(
+		180deg,
+		#2f354b 10%,
+		var(--color-secondary) 45%
+	);
 	--color-select-bg: var(--color-secondary);
-	--color-select-border: var(--color-text-secondary);
+	--color-select-border: #3f4558;
 	--code-editor-text: #a5abd0;
 }
 
@@ -66,9 +82,11 @@ label {
 ==========================
 */
 .project-container {
+	width: 100%;
 	height: 100vh;
 	display: flex;
 }
+/* 
 
 /* 
 ==========================
@@ -116,17 +134,14 @@ label {
 }
 .body-container {
 	height: 100vh;
-	width: 100%;
+	width: 75%;
 	margin: auto;
 	padding: 1rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	/* border: 1px dashed var(--color-secondary); */
 }
 .input-box-wrapper {
-	/* display: none; */
-
 	width: 100%;
 	height: auto;
 	background-color: var(--color-secondary-light);
@@ -175,19 +190,6 @@ Textarea Styles:
 
 /* 
 =================================
-[Code Editor] Responsive Media
-=================================
-*/
-@media (max-width: 32rem) {
-	.CodeMirror {
-		font-size: .8rem;
-		line-height: 20px;
-		padding: .5rem 0;
-	}
-}
-
-/* 
-=================================
 [Side Bar]
 =================================
 */
@@ -197,11 +199,11 @@ Textarea Styles:
 	background-image: linear-gradient(
 		180deg,
 		var(--color-secondary-light) 50%,
-		#373d4e 100%
+		#2a3146 100%
 	);
 	padding: 2rem 1.4rem;
 	/* offset-x | offset-y | blur-radius | color */
-	box-shadow: inset 6px 0 6px #121733;
+	box-shadow: inset 6px 0 6px #1b2142;
 }
 
 /* 
@@ -223,19 +225,15 @@ Textarea Styles:
 }
 .btn.cta {
 	border: 1px solid var(--color-primary-light);
-	background-image: linear-gradient(
-		180deg,
-		#ffcb5c 10%,
-		#ffbd32 45%
-	);
+	background-image: var(--color-btn-cta);
 }
 .btn__text {
-	font-size: 1rem;
+	font-size: var(--font-size-md);
 	cursor: pointer;
 	background: none;
 	color: var(--color-secondary-light);
 	border: none;
-	padding-right: 2.6rem;
+	padding-right: 3rem;
 }
 .btn__icon {
 	width: 1.4rem;
@@ -260,11 +258,189 @@ Textarea Styles:
 
 /* 
 =================================
-[Nav Heading]
+[Sidebar Heading]
 =================================
 */
 .nav-heading {
 	color: var(--color-text-primary);
+	font-size: var(--font-size-md);
 	text-transform: uppercase;
 	margin-top: 2rem;
+	margin-bottom: 0.6rem;
+}
+.sub-heading-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1rem;
+}
+.sub__heading {
+	color: var(--color-text-secondary);
+	font-size: var(--font-size-md);
+}
+
+/* 
+=================================
+[Select Box]
+=================================
+*/
+.custom-select {
+	position: relative;
+	width: auto;
+}
+select {
+	font-family: 'Quicksand', sans-serif;
+	font-size: var(--font-size-md);
+	color: var(--color-text-secondary);
+	padding: .5rem 1rem;
+	background-image: var(--color-btn-select);
+	background: var(--color-secondary);
+	border: 1px solid var(--color-select-border);
+	border-radius: 0.3rem;
+	box-shadow: 0 0 2px -1px var(--box-shadow),
+		0 2px 9px -5px var(--box-shadow);
+	transition: .2s;
+	cursor: pointer;
+}
+.custom-arrow {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: block;
+	background-image: var(--color-btn-select);
+	border: 1px solid var(--color-select-border);
+	border-radius: 0 0.3rem 0.3rem 0;
+	height: 100%;
+	width: 2.6rem;
+	pointer-events: none;
+	cursor: pointer;
+}
+.select-icon {
+	fill: var(--color-text-secondary);
+}
+
+/* 
+=================================
+[Toggles]
+=================================
+*/
+.tggl-grp {
+	display: block;
+	text-align: center;
+	width: 100%;
+	margin: 1em 0;
+}
+.tggl-wrap {
+	display: inline-block;
+}
+.tggl-input {
+	display: none;
+}
+.tggl-btn {
+	transition: all 0.3s ease-in;
+	display: block;
+	position: relative;
+	width: 4em;
+	height: 2em;
+	border-radius: 1em;
+	cursor: pointer;
+}
+.tggl-btn.txtswitch {
+	width: 5em;
+	padding: 2px;
+}
+.tggl-btn.txtswitch span {
+	display: block;
+	position: absolute;
+	width: calc(5em - 8px);
+	line-height: calc(2em - 4px);
+	font-weight: 700;
+	transition: opacity 0.3s ease;
+}
+.tggl-btn.txtswitch span.on {
+	opacity: 0;
+	text-align: right;
+	padding-right: 2em;
+}
+.tggl-btn.txtswitch span.off {
+	opacity: 1;
+	text-align: left;
+	padding-left: 2em;
+}
+.tggl-btn.txtswitch:after {
+	content: '';
+	display: block;
+	position: absolute;
+	border-radius: 50%;
+	top: 2px;
+	left: 2px;
+	transition: left 0.2s ease;
+}
+.tggl-input:checked + .tggl-btn.txtswitch:after {
+	left: calc(3em + 2px);
+}
+.tggl-input:checked + .tggl-btn.txtswitch span.on {
+	opacity: 1;
+}
+.tggl-input:checked + .tggl-btn.txtswitch span.off {
+	opacity: 0;
+}
+.tggl-btn.yang {
+	background-color: var(--color-secondary);
+	border: solid 2px var(--color-toggle-off);
+}
+.tggl-btn.yang.switch:after {
+	background-color: var(--color-toggle-off);
+}
+.tggl-input:checked + .tggl-btn.yang.switch:after {
+	background-color: var(--color-toggle-on);
+}
+.tggl-input:checked + .tggl-btn.yang {
+	border: solid 2px var(--color-toggle-on);
+}
+.tggl-btn.yang.txtswitch span {
+	line-height: calc(2em - 8px);
+}
+.tggl-btn.yang.txtswitch span.on {
+	color: var(--color-toggle-on);
+}
+.tggl-btn.yang.txtswitch span.off {
+	color: var(--color-toggle-off);
+}
+.tggl-btn.yang.txtswitch:after {
+	width: calc(2em - 8px);
+	height: calc(2em - 8px);
+	background-color: var(--color-toggle-off);
+}
+.tggl-input:checked + .tggl-btn.yang.txtswitch:after {
+	background-color: var(--color-toggle-on);
+}
+
+/*
+=================================
+Responsive Media
+=================================
+*/
+@media (max-width: 48rem) {
+	.project-container {
+		height: 90vh;
+		flex-direction: column;
+	}
+	.CodeMirror {
+		font-size: .8rem;
+		line-height: 20px;
+		padding: .5rem 0;
+	}
+	.side-nav {
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		gap: 1.6rem;
+		/* flex-wrap: wrap; */
+	}
+	.btn {
+		width: 14rem;
+	}
 }

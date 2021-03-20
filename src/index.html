@@ -14,7 +14,6 @@
 	<title>CodeSnap</title>
 	<!-- [CSS] -->
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" type="text/css" href="/src/js/components/theme.css" />
 	<!-- [JS] -->
 	<script src="js/app.js" defer></script>
 	<!-- [CodeMirror Code Editor] -->
@@ -92,6 +91,106 @@
 			</div>
 			<!-- Theme Header -->
 			<h2 class="nav-heading">Theme</h2>
+			<!-- Theme Select Box -->
+			<div class="custom-select">
+				<select>
+					<option value="material-palenight">Material-Palenight</option>
+					<option value="default">Default</option>
+					<option value="ambiance">Ambiance</option>
+					<option value="ayu-mirage">Ayu-Mirage</option>
+					<option value="cobalt">Cobalt</option>
+					<option value="dracula">Dracula</option>
+					<option value="lucario">Lucario</option>
+					<option value="material">Material</option>
+					<option value="mdn-like">MDN-like</option>
+					<option value="neo">Neo</option>
+					<option value="oceanic-next">Oceanic-Next</option>
+					<option value="paraiso-light">Paraiso-Light</option>
+					<option value="shadowfox">Shadowfox</option>
+					<option value="solarized-dark">Solarized-Dark</option>
+					<option value="solarized-light">Solarized-Light</option>
+					<option value="tomorrow-night-eighties">Tomorrow-Night-Eighties</option>
+					<option value="yeti">Yeti</option>
+					<option value="yonce">Yonce</option>
+				</select>
+				<span class="custom-arrow">
+					<svg class="select-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
+						style="enable-background:new 0 0 24 24;" xml:space="preserve">
+						<path d="M8.1,9.3l3.9,3.9l3.9-3.9c0.4-0.4,1-0.4,1.4,0c0.4,0.4,0.4,1,0,1.4l-4.6,4.6c-0.4,0.4-1,0.4-1.4,0l-4.6-4.6
+	c-0.4-0.4-0.4-1,0-1.4C7.1,8.9,7.7,8.9,8.1,9.3z" />
+					</svg>
+				</span>
+			</div>
+			<!-- Language Header -->
+			<h2 class="nav-heading">Language</h2>
+			<!-- Language Select Box -->
+			<div class="custom-select">
+				<select>
+					<option value="javascript">JavaScript</option>
+					<option value="css">CSS</option>
+					<option value="django">Django</option>
+					<option value="go">Go</option>
+					<option value="handlebars">Handlebars</option>
+					<option value="htmlembedded">HTML Embedded</option>
+					<option value="htmlmixed">HTML Mixed</option>
+					<option value="http">HTTP</option>
+					<option value="markdown">Markdown</option>
+					<option value="php">PHP</option>
+					<option value="powershell">Powershell</option>
+					<option value="pug">Pug</option>
+					<option value="python">Python</option>
+					<option value="ruby">Ruby</option>
+					<option value="rust">Rust</option>
+					<option value="sass">Sass</option>
+					<option value="shell">Shell</option>
+					<option value="swift">Swift</option>
+					<option value="vue">Vue</option>
+					<option value="xml">Xml</option>
+					<option value="tomorrow-night-eighties">Tomorrow-Night-Eighties</option>
+				</select>
+				<span class="custom-arrow">
+					<svg class="select-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
+						style="enable-background:new 0 0 24 24;" xml:space="preserve">
+						<path d="M8.1,9.3l3.9,3.9l3.9-3.9c0.4-0.4,1-0.4,1.4,0c0.4,0.4,0.4,1,0,1.4l-4.6,4.6c-0.4,0.4-1,0.4-1.4,0l-4.6-4.6
+	c-0.4-0.4-0.4-1,0-1.4C7.1,8.9,7.7,8.9,8.1,9.3z" />
+					</svg>
+				</span>
+			</div>
+			<!-- Styles Header -->
+			<h2 class="nav-heading">Styles</h2>
+			<div class="sub-heading-container">
+				<p class="sub__heading">Box Shadow</p>
+				<!-- [Box Shadow Toggle] -->
+				<div class="tggl-wrap">
+					<input class='tggl-input' id='boxShadow' type='checkbox'>
+					<label class='tggl-btn txtswitch yang' for='boxShadow'>
+						<span class="on">ON</span><span class="off">OFF</span>
+					</label>
+				</div>
+			</div>
+			<div class="sub-heading-container">
+				<p class="sub__heading">Line Numbering</p>
+				<!-- [Line Numbers Toggle] -->
+				<div class="tggl-wrap">
+					<input class='tggl-input' id='lineNumbers' type='checkbox'>
+					<label class='tggl-btn txtswitch yang' for='lineNumbers'>
+						<span class="on">ON</span><span class="off">OFF</span>
+					</label>
+				</div>
+			</div>
+			<div class="sub-heading-container">
+				<p class="sub__heading">Header</p>
+				<!-- [Heading Toggle] -->
+				<div class="tggl-wrap">
+					<input class='tggl-input' id='heading' type='checkbox'>
+					<label class='tggl-btn txtswitch yang' for='heading'>
+						<span class="on">ON</span><span class="off">OFF</span>
+					</label>
+				</div>
+			</div>
+
 		</div>
 
 	</div>
