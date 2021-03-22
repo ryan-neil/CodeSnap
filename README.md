@@ -21,6 +21,7 @@ A quick look at the files and directories you'll see in the repo.
         ├── editor
         ├── navbar
         ├── select-bars
+        ├── toggle
       └── app.js
 ```
 
@@ -32,34 +33,31 @@ A quick look at the files and directories you'll see in the repo.
 ## ✅ Todo
 Features:
 - [x] Implement CodeMirror.
+- [ ] Toggle code editor styles.
+      - [x] Box shadow toggle.
+      - [ ] Line numbering toggle.
+      - [x] Header toggle.
+- [ ] Export to svg and png button.
 - [ ] Customize background color.
-- [ ] Toggle styles (box shadow, line numbering, header, etc.).
-- [ ] Customize font families.
 - [ ] Custom code editor themes.
 - [ ] Copy code button in text editor.
+- [ ] Customize font families.
 
-Design:
-- [ ] Add side nav bar with functionality.
+Design/Build:
+- [x] Add side nav bar with functionality.
 - [ ] Side navbar functions:
-    - [ ] Export button ("Export" exports to png. Icon drop down list of png and svg).
-    - [ ] Theme select bar.
-    - [ ] Language select bar.
-    - [ ] Styles toggles.
-        - [ ] Box shadow toggle.
-        - [ ] Line numbering toggle.
-        - [ ] Header toggle.
+    - [x] Export CTA button - "Export" exports to png. Icon activates dropdown list of png and svg (Stripe dropdown effect).
+    - [x] Theme select bar.
+    - [x] Language select bar.
+    - [x] Styles toggles.
     - [ ] Background color picker.
-    - [ ] Share snippet (Twitter, Instagram, etc.)
+    - [ ] Share code (Twitter, Instagram, etc.)
 
-Build:
-- [x] Auto resize textarea.
-- [ ] Side functionality bar.
-- [ ] Navigation bar icons dropdown effect (stripe).
-
-App Road-map:
+Road-map:
 - [ ] Implement social aspect to app.
 - [ ] Allow users to save other users' code snippets.
 - [ ] Share code snippets between users and social media accounts.
+- [ ] More functionality (font styles, font sizing, etc.).
 
 ## 🔗 Project Resources
 CodeMirror:
