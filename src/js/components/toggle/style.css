@@ -67,96 +67,95 @@ body {
 [Toggle] Style
 ==========================
 */
-.tggl-grp {
-	display: block;
-	text-align: center;
-	width: 100%;
-	margin: 1em 0;
-}
-.tggl-wrap {
-	display: inline-block;
-}
-.tggl-input {
+.toggle-input {
 	display: none;
 }
-.tggl-btn {
-	transition: all 0.3s ease-in;
-	display: block;
-	position: relative;
-	width: 4em;
-	height: 2em;
-	border-radius: 1em;
-	cursor: pointer;
+/* toggle circle location */
+.toggle-input:checked + .toggle-btn.switch:after {
+	left: calc(2.16em + 2px);
+}
+/* "on" text display when toggle in "on" */
+.toggle-input:checked + .toggle-btn.switch span.on {
+	opacity: 1;
+}
+/* "off" text display when toggle in "on" */
+.toggle-input:checked + .toggle-btn.switch span.off {
+	opacity: 0;
+}
+/* toggle "on" border color */
+.toggle-input:checked + .toggle-btn {
+	border: solid 2px var(--color-toggle-on);
 }
 
-.tggl-btn.txtswitch {
-	width: 5em;
+/* pill styles */
+.toggle-btn {
+	display: block;
+	position: relative;
+	height: 1.8em;
+	background-color: var(--light);
+	border: solid 2px var(--color-toggle-off);
+	border-radius: 1em;
+	cursor: pointer;
+	transition: all 0.3s ease-in;
+}
+
+/* pill sizing */
+.toggle-btn.switch {
+	width: 4em;
+	/* centers the "on" and "off" text */
 	padding: 2px;
 }
-.tggl-btn.txtswitch span {
+.toggle-btn.switch span {
 	display: block;
 	position: absolute;
-	width: calc(5em - 8px);
+	/* "on" text location */
+	width: calc(4em - 4px);
 	line-height: calc(2em - 4px);
+	font-size: var(--font-size-sm);
 	font-weight: 700;
 	transition: opacity 0.3s ease;
 }
-.tggl-btn.txtswitch span.on {
+/* "on" text location */
+.toggle-btn.switch span.on {
 	opacity: 0;
 	text-align: right;
 	padding-right: 2em;
 }
-.tggl-btn.txtswitch span.off {
+/* "off" text location */
+.toggle-btn.switch span.off {
 	opacity: 1;
 	text-align: left;
-	padding-left: 2em;
+	padding-left: 1.8em;
 }
-.tggl-btn.txtswitch:after {
-	content: '';
-	display: block;
+.toggle-btn.switch:after {
+	content: ''; /* ?  */
+	display: block; /* ?  */
 	position: absolute;
 	border-radius: 50%;
-	top: 2px;
-	left: 2px;
+	top: 2px; /* ?  */
+	left: 2px; /* ?  */
 	transition: left 0.2s ease;
 }
-.tggl-input:checked + .tggl-btn.txtswitch:after {
-	left: calc(3em + 2px);
-}
-.tggl-input:checked + .tggl-btn.txtswitch span.on {
-	opacity: 1;
-}
-.tggl-input:checked + .tggl-btn.txtswitch span.off {
-	opacity: 0;
-}
-.tggl-btn.yang {
-	background-color: var(--light);
-	border: solid 2px var(--color-toggle-off);
-}
-.tggl-btn.yang.switch:after {
-	background-color: var(--color-toggle-off);
-}
-.tggl-input:checked + .tggl-btn.yang.switch:after {
-	background-color: var(--color-toggle-on);
-}
-.tggl-input:checked + .tggl-btn.yang {
-	border: solid 2px var(--color-toggle-on);
-}
-.tggl-btn.yang.txtswitch span {
+/* text ("on" and "off") line height */
+.toggle-btn.switch span {
 	line-height: calc(2em - 8px);
 }
-.tggl-btn.yang.txtswitch span.on {
+/* font color when "on" */
+.toggle-btn.switch span.on {
 	color: var(--color-toggle-on);
 }
-.tggl-btn.yang.txtswitch span.off {
+/* font color when "off" */
+.toggle-btn.switch span.off {
 	color: var(--color-toggle-off);
 }
-/* Sizing */
-.tggl-btn.yang.txtswitch:after {
-	width: calc(2em - 8px);
-	height: calc(2em - 8px);
+
+/* circle toggle sizing and color when "off" */
+.toggle-btn.switch:after {
+	width: calc(1.6em - 4px);
+	height: calc(1.6em - 4px);
 	background-color: var(--color-toggle-off);
 }
-.tggl-input:checked + .tggl-btn.yang.txtswitch:after {
+/* circle toggle color when "on" */
+.toggle-input:checked + .toggle-btn.switch:after {
 	background-color: var(--color-toggle-on);
 }

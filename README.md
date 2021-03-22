@@ -72,6 +72,9 @@ Color Picker:
 * [Color Picker Tutorial 1](https://www.youtube.com/watch?v=RSbZJYVQmPU)
 * [Color Picker Tutorial 2](https://www.youtube.com/watch?v=DP9-CVgkgDA)
 * [Input Type Color Tutorial](https://www.youtube.com/watch?v=eIw-Nou9L9E)
+
+Misc:
+* [Color is Math](https://dev.to/madsstoumann/colors-are-math-how-they-match-and-how-to-build-a-color-picker-4ei8)
 * [Auto-grow text area](https://css-tricks.com/the-cleanest-trick-for-autogrowing-textareas/)
 * [pre Tag MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre)
 * [pre Tag W3](https://www.w3schools.com/tags/tag_pre.asp)
