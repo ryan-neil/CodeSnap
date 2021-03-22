@@ -34,9 +34,9 @@ A quick look at the files and directories you'll see in the repo.
 Features:
 - [x] Implement CodeMirror.
 - [ ] Toggle code editor styles.
-      - [x] Box shadow toggle.
-      - [ ] Line numbering toggle.
-      - [x] Header toggle.
+    - [x] Box shadow toggle.
+    - [ ] Line numbering toggle.
+    - [x] Header toggle.
 - [ ] Export to svg and png button.
 - [ ] Customize background color.
 - [ ] Custom code editor themes.
