@@ -31,7 +31,7 @@ A quick look at the files and directories you'll see in the repo.
         1. **`/components`**: This directory contains all JavaScript files and components files.
 
 ## ✅ Todo
-Features:
+__Features:__
 - [x] Implement CodeMirror.
 - [ ] Toggle code editor styles.
     - [x] Box shadow toggle.
@@ -43,7 +43,7 @@ Features:
 - [ ] Copy code button in text editor.
 - [ ] Customize font families.
 
-Design/Build:
+__Design/Build:__
 - [x] Add side nav bar with functionality.
 - [ ] Side navbar functions:
     - [x] Export CTA button - "Export" exports to png. Icon activates dropdown list of png and svg (Stripe dropdown effect).
@@ -52,21 +52,24 @@ Design/Build:
     - [x] Styles toggles.
     - [ ] Background color picker.
     - [ ] Share code (Twitter, Instagram, etc.)
+- [ ] Add language tag (js, css, etc.) to code editor.
 
-Road-map:
+__Road-map:__
 - [ ] Implement social aspect to app.
 - [ ] Allow users to save other users' code snippets.
 - [ ] Share code snippets between users and social media accounts.
-- [ ] More functionality (font styles, font sizing, etc.).
+- [ ] More functionality (tab sizing, font styles, font sizing, etc.).
 
 ## 🔗 Project Resources
 CodeMirror:
 * [CodeMirror User Manual](https://codemirror.net/doc/manual.html)
 * [CodeMirror Setup Guide](https://www.youtube.com/watch?v=o1DDWQDBT9Y)
+* [Changing Mode](https://codemirror.net/doc/manual.html#setOption)
+* [Changing Mode StackOverflow](https://stackoverflow.com/questions/6130563/how-to-dynamically-switch-modes-with-codemirror)
 
 Color Picker:
 * [Customize ColorPicker in JavaScript](https://ej2.syncfusion.com/javascript/documentation/color-picker/how-to/customize-colorpicker/)
-* [input type color](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/color)
+* [Input type color](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/color)
 * [Color Picker Tutorial 1](https://www.youtube.com/watch?v=RSbZJYVQmPU)
 * [Color Picker Tutorial 2](https://www.youtube.com/watch?v=DP9-CVgkgDA)
 * [Input Type Color Tutorial](https://www.youtube.com/watch?v=eIw-Nou9L9E)
