@@ -2,17 +2,43 @@
 const editor = CodeMirror.fromTextArea(
 	document.getElementById('text-editor'),
 	{
-		mode           : 'javascript',
-		theme          : 'material-palenight',
-		lineNumbers    : true,
-		tabSize        : 2,
-		lineWrapping   : true,
-		scrollbarStyle : null
+		mode            : 'javascript',
+		theme           : 'material-palenight',
+		lineNumbers     : true,
+		tabSize         : 2,
+		lineWrapping    : true,
+		scrollbarStyle  : null,
+		matchBrackets   : true,
+		styleActiveLine : true
 	}
 );
 
+// starter code in the text editor
+const starterCode = editor
+	.getDoc()
+	.setValue(
+		'// JavaScript Higher Order Functions\nconst add = (a, b) => a + b;\nconst isEven = num => num % 2 === 0;\n\nconst data = [ 2, 3, 1, 5, 4, 6 ];\n\nconst evenValues = data.filter(isEven); // [2, 4, 6]\nconst evenSum = data.filter(isEven).reduce(add); // 12'
+	);
+
+// resetting all toggles to "on"
+let clist = document.getElementsByTagName('input');
+for (let tag of clist) {
+	tag.checked = true;
+}
+
+// toggle code editor line numbering on and off
+const toggleLineNumbers = () => {
+	const numbersCheckbox = document.getElementById('lineNumbers');
+
+	if (numbersCheckbox.checked === true) {
+		editor.setOption('lineNumbers', true);
+	} else {
+		editor.setOption('lineNumbers', false);
+	}
+};
+
 // toggle code editor shadow on and off
-function toggleShadow() {
+const toggleShadow = () => {
 	const shadowCheckBox = document.getElementById('boxShadow');
 	const editor = document.querySelector('.input-box-wrapper');
 
@@ -22,10 +48,10 @@ function toggleShadow() {
 	} else {
 		editor.style.boxShadow = 'none';
 	}
-}
+};
 
 // toggle code editor header on and off
-function toggleHead() {
+const toggleHead = () => {
 	const headerCheckBox = document.getElementById('heading');
 	const header = document.querySelector('.input-box__item.header');
 
@@ -34,9 +60,4 @@ function toggleHead() {
 	} else {
 		header.style.display = 'none';
 	}
-}
-
-// toggle code editor line numbers on and off
-function toggleLineNumbers() {
-	const numbersCheckBox = document.getElementById('lineNumbers');
-}
+};

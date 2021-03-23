@@ -58,7 +58,7 @@
 						</div>
 						<!-- Code Editor Input Field -->
 						<div class="input-box__item body">
-							<textarea name="text" id="text-editor" placeholder="Paste code here..."
+							<textarea name="text" id="text-editor"
 								onInput="this.parentNode.dataset.replicatedValue = this.value"></textarea>
 						</div>
 					</div>
@@ -169,7 +169,7 @@
 				<p class="sub__heading">Box Shadow</p>
 				<!-- [Box Shadow Toggle] -->
 				<div class="toggle-container">
-					<input class='toggle-input' id='boxShadow' type='checkbox' onclick="toggleShadow()">
+					<input class='toggle-input' id='boxShadow' type='checkbox' onclick="toggleShadow()" checked>
 					<label class='toggle-btn switch' for='boxShadow'>
 						<span class="on">ON</span><span class="off">OFF</span>
 					</label>
@@ -179,7 +179,7 @@
 				<p class="sub__heading">Line Numbering</p>
 				<!-- [Line Numbers Toggle] -->
 				<div class="toggle-container">
-					<input class='toggle-input' id='lineNumbers' type='checkbox' onclick="toggleLineNumbers()">
+					<input class='toggle-input' id='lineNumbers' type='checkbox' onclick="toggleLineNumbers()" checked>
 					<label class='toggle-btn switch' for='lineNumbers'>
 						<span class=" on">ON</span><span class="off">OFF</span>
 					</label>
@@ -189,7 +189,7 @@
 				<p class="sub__heading">Header</p>
 				<!-- [Heading Toggle] -->
 				<div class="toggle-container">
-					<input class='toggle-input' id='heading' type='checkbox' onclick="toggleHead()">
+					<input class='toggle-input' id='heading' type='checkbox' onclick="toggleHead()" checked>
 					<label class='toggle-btn switch' for='heading'>
 						<span class="on">ON</span><span class="off">OFF</span>
 					</label>

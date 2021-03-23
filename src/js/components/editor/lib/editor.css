@@ -22,11 +22,16 @@
 .CodeMirror-linenumbers {
 }
 .CodeMirror-linenumber {
-	padding: 0 3px 0 5px;
+	margin-left: -12px;
 	min-width: 20px;
 	text-align: right;
 	color: #999;
 	white-space: nowrap;
+}
+@media (max-width: 49rem) {
+	.CodeMirror-linenumber {
+		margin-left: -5px;
+	}
 }
 .CodeMirror-guttermarker {
 	color: black;
