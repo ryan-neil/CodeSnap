@@ -1,9 +1,9 @@
 // CodeMirror
 const editor = CodeMirror.fromTextArea(
-	document.getElementById('text-editor'),
+	document.getElementById("text-editor"),
 	{
-		mode            : 'javascript',
-		theme           : 'material-palenight',
+		mode            : "javascript",
+		theme           : "material-palenight",
 		lineNumbers     : true,
 		tabSize         : 2,
 		lineWrapping    : true,
@@ -13,51 +13,64 @@ const editor = CodeMirror.fromTextArea(
 	}
 );
 
-// starter code in the text editor
+// starter code in the editor
 const starterCode = editor
 	.getDoc()
 	.setValue(
-		'// JavaScript Higher Order Functions\nconst add = (a, b) => a + b;\nconst isEven = num => num % 2 === 0;\n\nconst data = [ 2, 3, 1, 5, 4, 6 ];\n\nconst evenValues = data.filter(isEven); // [2, 4, 6]\nconst evenSum = data.filter(isEven).reduce(add); // 12'
+		"// JavaScript Higher Order Functions\nconst add = (a, b) => a + b;\nconst isEven = num => num % 2 === 0;\n\nconst data = [ 2, 3, 1, 5, 4, 6 ];\n\nconst evenValues = data.filter(isEven); // [2, 4, 6]\nconst evenSum = data.filter(isEven).reduce(add); // 12"
 	);
 
-// resetting all toggles to "on"
-let clist = document.getElementsByTagName('input');
-for (let tag of clist) {
-	tag.checked = true;
-}
+// function that resets all toggles to "on"
+const resetToggles = () => {
+	let toggles = document.getElementsByClassName("toggle-input");
 
-// toggle code editor line numbering on and off
+	for (let tag of toggles) {
+		tag.checked = true;
+	}
+};
+resetToggles();
+
+// function that toggles editor line numbering on and off
 const toggleLineNumbers = () => {
-	const numbersCheckbox = document.getElementById('lineNumbers');
+	const numbersCheckBox = document.getElementById("lineNumbers");
 
-	if (numbersCheckbox.checked === true) {
-		editor.setOption('lineNumbers', true);
-	} else {
-		editor.setOption('lineNumbers', false);
-	}
+	numbersCheckBox.addEventListener("click", () => {
+		if (numbersCheckBox.checked === true) {
+			editor.setOption("lineNumbers", true);
+		} else {
+			editor.setOption("lineNumbers", false);
+		}
+	});
 };
+toggleLineNumbers();
 
-// toggle code editor shadow on and off
+// function that toggles editor shadow on and off
 const toggleShadow = () => {
-	const shadowCheckBox = document.getElementById('boxShadow');
-	const editor = document.querySelector('.input-box-wrapper');
+	const shadowCheckBox = document.getElementById("boxShadow");
+	const editor = document.querySelector(".input-box-wrapper");
 
-	if (shadowCheckBox.checked === true) {
-		(editor.style.boxShadow = 'rgba(0, 0, 0, 0.3) 0px 19px 38px'),
-			'rgba(0, 0, 0, 0.22) 0px 15px 12px';
-	} else {
-		editor.style.boxShadow = 'none';
-	}
+	shadowCheckBox.addEventListener("click", () => {
+		if (shadowCheckBox.checked === true) {
+			editor.style.boxShadow =
+				"0px 25px 15px -10px rgba(21, 22, 65, 0.3)";
+		} else {
+			editor.style.boxShadow = "none";
+		}
+	});
 };
+toggleShadow();
 
-// toggle code editor header on and off
+// function that toggles editor header on and off
 const toggleHead = () => {
-	const headerCheckBox = document.getElementById('heading');
-	const header = document.querySelector('.input-box__item.header');
+	const headerCheckBox = document.getElementById("heading");
+	const header = document.querySelector(".input-box__item.header");
 
-	if (headerCheckBox.checked === true) {
-		header.style.display = 'flex';
-	} else {
-		header.style.display = 'none';
-	}
+	headerCheckBox.addEventListener("click", () => {
+		if (headerCheckBox.checked === true) {
+			header.style.display = "flex";
+		} else {
+			header.style.display = "none";
+		}
+	});
 };
+toggleHead();

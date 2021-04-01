@@ -33,15 +33,17 @@ A quick look at the files and directories you'll see in the repo.
 ## ✅ Todo
 __Features:__
 - [x] Implement CodeMirror.
-- [ ] Toggle code editor styles.
+- [x] Toggle CodeSnap editor styles.
     - [x] Box shadow toggle.
-    - [ ] Line numbering toggle.
+    - [x] Line numbering toggle.
     - [x] Header toggle.
+    - [ ] Language tag toggle.
 - [ ] Export to svg and png button.
 - [ ] Customize background color.
-- [ ] Custom code editor themes.
+- [ ] Custom CodeSnap editor themes.
 - [ ] Copy code button in text editor.
 - [ ] Customize font families.
+- [ ] Profile page.
 
 __Design/Build:__
 - [x] Add side nav bar with functionality.
@@ -50,12 +52,18 @@ __Design/Build:__
     - [x] Theme select bar.
     - [x] Language select bar.
     - [x] Styles toggles.
+        - [ ] Display images under toggles showing what they do.
     - [ ] Background color picker.
     - [ ] Share code (Twitter, Instagram, etc.)
-- [ ] Add language tag (js, css, etc.) to code editor.
+- [ ] Add language tag (js, css, etc.) to CodeSnap editor.
+- [ ] On CodeSnap editor hover, pin icon (outline) displays. Pin to your collection. If pinned, icon displays filled.
+- [ ] Profile page.
+    - [ ] "Your Collections" tab.
 
 __Road-map:__
 - [ ] Implement social aspect to app.
+- [ ] Users can comment on other users' code snippet and make edits/suggestions.
+    - [ ] Edits and suggestions can be done right in the editor. Once "submitted" original snippet is unchanged but a snapshot of the suggested editor is posted in the comments along with a description (Slack style).
 - [ ] Allow users to save other users' code snippets.
 - [ ] Share code snippets between users and social media accounts.
 - [ ] More functionality (tab sizing, font styles, font sizing, etc.).
@@ -77,9 +85,6 @@ Color Picker:
 Misc:
 * [Color is Math](https://dev.to/madsstoumann/colors-are-math-how-they-match-and-how-to-build-a-color-picker-4ei8)
 * [Auto-grow text area](https://css-tricks.com/the-cleanest-trick-for-autogrowing-textareas/)
-* [pre Tag MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre)
-* [pre Tag W3](https://www.w3schools.com/tags/tag_pre.asp)
-* [code Tag MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code)
 * [Copy Text to Clipboard](https://www.30secondsofcode.org/blog/s/copy-text-to-clipboard-with-javascript)
 
 highlight.js: 

@@ -18,13 +18,14 @@
 	border-right: 1px solid #ddd;
 	background-color: #f7f7f7;
 	white-space: nowrap;
+	height: auto;
 }
 .CodeMirror-linenumbers {
 }
 .CodeMirror-linenumber {
-	margin-left: -12px;
+	margin-left: 1px;
 	min-width: 20px;
-	text-align: right;
+	text-align: center;
 	color: #999;
 	white-space: nowrap;
 }
@@ -307,6 +308,9 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {
 	display: inline-block;
 	vertical-align: top;
 	margin-bottom: -50px;
+
+	/* Line Number to Code Spacing  */
+	margin-right: .5rem;
 }
 .CodeMirror-gutter-wrapper {
 	position: absolute;
