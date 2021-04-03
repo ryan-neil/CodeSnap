@@ -9,8 +9,6 @@ Colors
 	--color-primary: #ffbd32;
 	--color-primary-light: #ffd271;
 	--color-secondary: ;
-	--color-textEditor-bg: #272c36;
-	--color-textEditor-header: #1b1e2c;
 	--white: #ffffff;
 	--color-primary-gradient: linear-gradient(
 		135deg,
@@ -20,8 +18,7 @@ Colors
 	/* Typography */
 	--text-color-heading: #3f4347;
 	--text-color-subheading: #545a5f;
-	--text-color-p: #676e74;
-	--text-color-codeEditor: #a5abd0;
+	--text-size-xsm: 0.750rem;
 	--text-size-sm: 0.875rem;
 	--text-size-base: 1rem;
 	--text-size-md: 1.0625rem;
@@ -37,9 +34,14 @@ Colors
 	--border-color-snap: #b0b6bb;
 	--border-color-nav: #d8e0e7;
 	--border-color-btn: var(--color-primary-light);
+	--box-shadow-sm: 0px 2px 9px -5px rgba(0, 0, 0, .6);
 	--box-shadow-sm: 0px 0px 2px -1px rgba(0, 0, 0, .3),
 		0px 2px 9px -5px rgba(0, 0, 0, .6);
 	--box-shadow-inset: inset 0 1px 3px 1px rgba(0, 0, 0, .06);
+	/* Code Editor Styles */
+	--color-textEditor-bg: #272c36;
+	--color-textEditor-header: #1b1e2c;
+	--text-color-codeEditor: #a5abd0;
 	/* Mac Dots */
 	--dot-color-red: #ff5e57;
 	--dot-color-yellow: #febc2e;
@@ -59,19 +61,16 @@ Colors
 		var(--color-secondary-bg) 10%,
 		var(--color-primary-bg) 45%
 	);
-	--color-select-bg: var(--color-primary-bg);
-	--color-select-border: var(--text-color-p);
 }
 /* Dark Mode */
 .darkmode {
 	--color-primary-bg: #21272f;
 	--color-secondary-bg: #2c333c;
-	--color-border-nav: #434a53;
 	--color-border: #fffffe;
+	--border-color-nav: #434a53;
 	/* Typography */
 	--color-text-heading: #cad9e6;
 	--color-text-subheading: #95a3af;
-	--color-text-p: #95a3af;
 }
 
 * {
@@ -332,7 +331,7 @@ Textarea Styles:
 	opacity: 1;
 }
 .vertical-line {
-	background-color: var(--text-color-p);
+	background-color: var(--text-color-subheading);
 	width: 1px;
 	margin: 0 1rem;
 	height: 22px;
@@ -407,7 +406,7 @@ select {
 	display: none;
 }
 .toggle-input:checked + .toggle-btn.switch:after {
-	left: calc(2.16em + 2px);
+	left: calc(1.7em + 2px);
 }
 .toggle-input:checked + .toggle-btn.switch span.on {
 	opacity: 1;
@@ -422,18 +421,19 @@ select {
 	background-color: var(--color-primary-bg);
 	display: block;
 	position: relative;
-	height: 1.8em;
+	height: 1.4em;
 	border: 2px solid var(--toggle-color-off);
 	border-radius: 1em;
 	cursor: pointer;
 	transition: var(--transition);
 }
+/* Pill Styles */
 .toggle-btn.switch {
-	width: 4em;
+	width: 3.2em;
 	padding: 2px;
 }
 .toggle-btn.switch span {
-	font-size: var(--text-size-sm);
+	font-size: var(--text-size-xsm);
 	display: block;
 	position: absolute;
 	width: calc(4em - 4px);
@@ -449,30 +449,29 @@ select {
 .toggle-btn.switch span.off {
 	opacity: 1;
 	text-align: left;
-	padding-left: 1.8em;
+	padding-left: 1.6em;
 }
+/* Pill circle styles */
 .toggle-btn.switch:after {
 	content: '';
 	display: block;
 	position: absolute;
 	border-radius: 50%;
-	top: 2px;
-	left: 2px;
+	top: 1.6px;
+	left: 1.6px;
+	background-color: var(--toggle-color-off);
+	width: calc(1.1em - 2px);
+	height: calc(1.1em - 2px);
 	transition: left var(--transition);
 }
 .toggle-btn.switch span {
-	line-height: calc(2em - 8px);
+	line-height: calc(2em - 10px);
 }
 .toggle-btn.switch span.on {
 	color: var(--toggle-color-on);
 }
 .toggle-btn.switch span.off {
 	color: var(--toggle-color-off);
-}
-.toggle-btn.switch:after {
-	background-color: var(--toggle-color-off);
-	width: calc(1.6em - 4px);
-	height: calc(1.6em - 4px);
 }
 .toggle-input:checked + .toggle-btn.switch:after {
 	background-color: var(--toggle-color-on);
