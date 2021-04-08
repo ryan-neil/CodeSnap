@@ -156,9 +156,15 @@ a {
 	outline: 1px dashed var(--border-color-snap);
 	height: auto;
 	border-radius: 5px;
-	/* padding: 8px; */
-	/* padding: 16px; */
-	/* padding: 32px; */
+	padding: 64px;
+}
+.window-pad-16 {
+	padding: 16px;
+}
+.window-pad-32 {
+	padding: 32px;
+}
+.window-pad-64 {
 	padding: 64px;
 }
 /* main code editor */
@@ -358,6 +364,30 @@ Textarea Styles:
 .sub__heading {
 	color: var(--text-color-subheading);
 	font-size: var(--text-size-sm);
+}
+/* Padding button toggles */
+.padding-container {
+	display: flex;
+	gap: 1rem;
+}
+.pad-btn {
+	color: var(--text-color-subheading);
+	font-size: var(--text-size-sm);
+	font-weight: 300;
+	background: none;
+	border: none;
+	cursor: pointer;
+	opacity: .8;
+	transition: var(--transition);
+}
+.pad-btn:hover {
+	color: var(--text-color-heading);
+	opacity: 1;
+}
+.pad-btn-active {
+	color: var(--text-color-heading);
+	font-weight: 500;
+	opacity: 1;
 }
 
 /* 

@@ -1,4 +1,7 @@
-// CodeMirror
+/* 
+=================================
+[CodeMirror]
+*/
 const editor = CodeMirror.fromTextArea(
 	document.getElementById("text-editor"),
 	{
@@ -13,14 +16,20 @@ const editor = CodeMirror.fromTextArea(
 	}
 );
 
-// starter code in the editor
+/* 
+=================================
+[starter code in the editor]
+*/
 const starterCode = editor
 	.getDoc()
 	.setValue(
 		"// JavaScript Higher Order Functions\nconst add = (a, b) => a + b;\nconst isEven = num => num % 2 === 0;\n\nconst data = [ 2, 3, 1, 5, 4, 6 ];\n\nconst evenValues = data.filter(isEven); // [2, 4, 6]\nconst evenSum = data.filter(isEven).reduce(add); // 12"
 	);
 
-// function that resets all toggles to "on"
+/* 
+=================================
+[function that resets all toggles to "on"]
+*/
 const resetToggles = () => {
 	let toggles = document.getElementsByClassName("toggle-input");
 
@@ -30,7 +39,10 @@ const resetToggles = () => {
 };
 resetToggles();
 
-// function that toggles editor line numbering on and off
+/* 
+=================================
+[function that toggles editor line numbering on and off]
+*/
 const toggleLineNumbers = () => {
 	const numbersCheckBox = document.getElementById("lineNumbers");
 
@@ -44,7 +56,10 @@ const toggleLineNumbers = () => {
 };
 toggleLineNumbers();
 
-// function that toggles editor shadow on and off
+/* 
+=================================
+[function that toggles editor shadow on and off]
+*/
 const toggleShadow = () => {
 	const shadowCheckBox = document.getElementById("boxShadow");
 	const editor = document.querySelector(".input-box-wrapper");
@@ -60,7 +75,10 @@ const toggleShadow = () => {
 };
 toggleShadow();
 
-// function that toggles editor header on and off
+/* 
+=================================
+[function that toggles editor header on and off]
+*/
 const toggleHead = () => {
 	const headerCheckBox = document.getElementById("heading");
 	const header = document.querySelector(".input-box__item.header");
@@ -74,3 +92,25 @@ const toggleHead = () => {
 	});
 };
 toggleHead();
+
+/* 
+=================================
+[function that toggles padding amount]
+*/
+const togglePadding = () => {
+	const snapWindow = document.querySelector(".snap-window");
+	const padBtn16 = document.querySelector(".pad-btn.pad-16");
+	const padBtn32 = document.querySelector(".pad-btn.pad-32");
+	const padBtn64 = document.querySelector(".pad-btn.pad-64");
+
+	padBtn16.addEventListener("click", () => {
+		snapWindow.classList.add("window-pad-16");
+	});
+	padBtn32.addEventListener("click", () => {
+		snapWindow.classList.add("window-pad-32");
+	});
+	padBtn64.addEventListener("click", () => {
+		snapWindow.classList.add("window-pad-64");
+	});
+};
+togglePadding();
