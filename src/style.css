@@ -18,6 +18,7 @@ Colors
 	/* Typography */
 	--text-color-heading: #3f4347;
 	--text-color-subheading: #545a5f;
+	--text-color-btn: #3f4347;
 	--text-size-xsm: 0.750rem;
 	--text-size-sm: 0.875rem;
 	--text-size-base: 1rem;
@@ -66,11 +67,13 @@ Colors
 .darkmode {
 	--color-primary-bg: #21272f;
 	--color-secondary-bg: #2c333c;
-	--color-border: #fffffe;
-	--border-color-nav: #434a53;
+	--color-border: #fffffe; /* edit? */
+	--border-color-nav: #434a53; /* edit */
+	--border-color-select: #ccd4da; /* edit */
+	--border-color-snap: #b0b6bb; /* edit */
 	/* Typography */
-	--color-text-heading: #cad9e6;
-	--color-text-subheading: #95a3af;
+	--text-color-heading: #cad9e6;
+	--text-color-subheading: #95a3af;
 }
 
 * {
@@ -223,11 +226,28 @@ Textarea Styles:
 	border-left: 1px solid var(--border-color-nav);
 	width: auto;
 	height: 100vh;
-	padding: 2rem 1.4rem;
+	padding: 1rem 1.4rem;
 	/* offset-x | offset-y | blur-radius | color */
 	box-shadow: var(--box-shadow-inset);
 }
-
+.side-nav__heading {
+	display: flex;
+	justify-content: flex-end;
+	padding-bottom: 2rem;
+}
+/* 
+=================================
+[Dark-Light Toggle]
+*/
+.dark-mode-toggle {
+	fill: var(--text-color-heading);
+	background: transparent;
+	cursor: pointer;
+	width: 1.8rem;
+	height: 1.8rem;
+	padding: 4px;
+	border: none;
+}
 /* 
 =================================
 [CTA Button]
@@ -248,7 +268,7 @@ Textarea Styles:
 	border: 1px solid var(--color-primary-light);
 }
 .btn__text {
-	color: var(--text-color-heading);
+	color: var(--text-color-btn);
 	font-size: var(--text-size-md);
 	font-family: 'Quicksand', sans-serif;
 	font-weight: 600;
