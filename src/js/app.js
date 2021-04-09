@@ -1,6 +1,6 @@
 /* 
 =================================
-[dark mode]
+	[dark mode]
 */
 // users' last choice will be remembered
 let darkMode = localStorage.getItem("darkMode");
@@ -43,7 +43,7 @@ darkModeToggle.addEventListener("click", () => {
 
 /* 
 =================================
-[CodeMirror]
+	[CodeMirror]
 */
 const editor = CodeMirror.fromTextArea(
 	document.getElementById("text-editor"),
@@ -61,7 +61,7 @@ const editor = CodeMirror.fromTextArea(
 
 /* 
 =================================
-[starter code in the editor]
+	[starter code in the editor]
 */
 const starterCode = editor
 	.getDoc()
@@ -71,7 +71,7 @@ const starterCode = editor
 
 /* 
 =================================
-[function that resets all toggles to "on"]
+	[function that resets all toggles to "on"]
 */
 const resetToggles = () => {
 	let toggles = document.getElementsByClassName("toggle-input");
@@ -84,7 +84,7 @@ resetToggles();
 
 /* 
 =================================
-[function that toggles editor line numbering on and off]
+	[function that toggles editor line numbering on and off]
 */
 const toggleLineNumbers = () => {
 	const numbersCheckBox = document.getElementById("lineNumbers");
@@ -101,7 +101,7 @@ toggleLineNumbers();
 
 /* 
 =================================
-[function that toggles editor shadow on and off]
+	[function that toggles editor shadow on and off]
 */
 const toggleShadow = () => {
 	const shadowCheckBox = document.getElementById("boxShadow");
@@ -109,10 +109,9 @@ const toggleShadow = () => {
 
 	shadowCheckBox.addEventListener("click", () => {
 		if (shadowCheckBox.checked === true) {
-			editor.style.boxShadow =
-				"0px 25px 15px -10px rgba(21, 22, 65, 0.3)";
+			editor.classList.add("display-shadow");
 		} else {
-			editor.style.boxShadow = "none";
+			editor.classList.remove("display-shadow");
 		}
 	});
 };
@@ -120,7 +119,7 @@ toggleShadow();
 
 /* 
 =================================
-[function that toggles editor header on and off]
+	[function that toggles editor header on and off]
 */
 const toggleHead = () => {
 	const headerCheckBox = document.getElementById("heading");
@@ -138,7 +137,7 @@ toggleHead();
 
 /* 
 =================================
-[function that toggles padding amount]
+	[function that toggles padding amount]
 */
 const togglePadding = () => {
 	const snapWindow = document.querySelector(".snap-window");

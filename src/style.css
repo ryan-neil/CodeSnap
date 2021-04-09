@@ -30,7 +30,6 @@ Colors
 	/* Styles */
 	--transition: 0.2s ease-in-out;
 	--card-color-bg: var(--color-primary-bg);
-	--border-color: #ccd4da;
 	--border-color-select: #ccd4da;
 	--border-color-snap: #b0b6bb;
 	--border-color-nav: #d8e0e7;
@@ -67,13 +66,17 @@ Colors
 .darkmode {
 	--color-primary-bg: #21272f;
 	--color-secondary-bg: #2c333c;
-	--color-border: #fffffe; /* edit? */
-	--border-color-nav: #434a53; /* edit */
-	--border-color-select: #ccd4da; /* edit */
-	--border-color-snap: #b0b6bb; /* edit */
+	--border-color-nav: #434a53;
+	--border-color-select: #434a53;
+	--border-color-snap: #b0b6bb;
 	/* Typography */
-	--text-color-heading: #cad9e6;
+	--text-color-heading: #d7e2eb;
 	--text-color-subheading: #95a3af;
+	--color-btn-select: linear-gradient(
+		180deg,
+		var(--color-secondary-bg) 10%,
+		var(--color-primary-bg) 45%
+	);
 }
 
 * {
@@ -177,6 +180,8 @@ a {
 	background-color: var(--color-textEditor-bg);
 	border: 1px solid var(--color-textEditor-header);
 	border-radius: 5px;
+}
+.input-box-wrapper.display-shadow {
 	box-shadow: 0px 25px 20px -10px rgba(21, 22, 65, 0.3);
 }
 /* main code editor header */
@@ -299,7 +304,8 @@ Textarea Styles:
 	visibility: visible;
 }
 .btn__icon-dropdown .dropdown-list {
-	background: #ffffff;
+	background: var(--color-primary-bg);
+	border: 1px solid var(--border-color-select);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -322,8 +328,8 @@ Textarea Styles:
 	width: auto;
 	height: auto;
 	box-shadow: 2px -2px 6px var(--color-box-shadow);
-	border-top: 7px solid #ffffff;
-	border-right: 7px solid #ffffff;
+	border-top: 7px solid var(--color-primary-bg);
+	border-right: 7px solid var(--color-primary-bg);
 	border-bottom: 6px solid transparent;
 	border-left: 6px solid transparent;
 	transform: rotate(-45deg);
@@ -348,7 +354,7 @@ Textarea Styles:
 	color: var(--text-color-heading);
 	font-size: var(--text-size-sm);
 	display: block;
-	border-bottom: 1px solid rgba(27, 30, 45, 0.10);
+	border-bottom: 1px solid var(--border-color-nav);
 	padding: 12px 6px;
 	text-decoration: none;
 	opacity: 0.7;
@@ -440,12 +446,12 @@ select {
 	border: 1px solid var(--border-color-select);
 	border-radius: 0 0.3rem 0.3rem 0;
 	height: 100%;
-	width: 2.6rem;
+	width: 2.4rem;
 	pointer-events: none;
 	cursor: pointer;
 }
 .select-icon {
-	fill: var(--text-color-subheading);
+	fill: var(--text-color-heading);
 }
 
 /* 
