@@ -151,16 +151,11 @@ toggleHead();
 
 /* 
 =================================
-	[toggles padding button styles]
+	[toggle padding]
 */
 
 // select all padding buttons
 const padBtns = document.querySelectorAll(".pad-btn");
-
-// padding button variables
-const btn16 = document.querySelector(".btn-16");
-const btn32 = document.querySelector(".btn-32");
-const btn64 = document.querySelector(".btn-64");
 
 // loop through all the padding buttons
 padBtns.forEach((clickedBtn) => {
@@ -179,7 +174,7 @@ padBtns.forEach((clickedBtn) => {
 		const snapWindow = document.querySelector(".snap-window");
 
 		// remove all padding function
-		// BUGGGG
+		// **BUG** initial button click removes all padding without adding correct padding.
 		const removePadding = () => {
 			snapWindow.classList.remove(
 				"active-pad-16",
@@ -189,25 +184,24 @@ padBtns.forEach((clickedBtn) => {
 		};
 		removePadding();
 
+		// padding button variables
+		const btn16 = document.querySelector(".btn-16");
+		const btn32 = document.querySelector(".btn-32");
+		const btn64 = document.querySelector(".btn-64");
+
 		// add 16px padding on click
-		btn16.addEventListener("click", (removePadding) => {
+		btn16.addEventListener("click", () => {
 			snapWindow.classList.add("active-pad-16");
 		});
 
 		// add 32px padding on click
-		btn32.addEventListener("click", (removePadding) => {
+		btn32.addEventListener("click", () => {
 			snapWindow.classList.add("active-pad-32");
 		});
 
 		// add 64px padding on click
-		btn64.addEventListener("click", (removePadding) => {
+		btn64.addEventListener("click", () => {
 			snapWindow.classList.add("active-pad-64");
 		});
 	});
 });
-
-/* 
-=================================
-	[toggle snap window padding amount]
-*/
-// get the snap window styles
