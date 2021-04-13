@@ -16,6 +16,8 @@ const enableDarkMode = () => {
 	document.body.classList.add("darkmode");
 	// 2. update darkMode in the localStorage
 	localStorage.setItem("darkMode", "enabled");
+
+	return;
 };
 
 // disable function
@@ -24,6 +26,8 @@ const disableDarkMode = () => {
 	document.body.classList.remove("darkmode");
 	// 2. update darkMode in the localStorage
 	localStorage.setItem("darkMode", null);
+
+	return;
 };
 
 if (darkMode === "enabled") {
@@ -39,6 +43,8 @@ darkModeToggle.addEventListener("click", () => {
 	} else {
 		disableDarkMode();
 	}
+
+	return;
 });
 
 /* 
@@ -79,6 +85,8 @@ const resetToggles = () => {
 	for (let tag of toggles) {
 		tag.checked = true;
 	}
+
+	return;
 };
 resetToggles();
 
@@ -96,6 +104,8 @@ const toggleLineNumbers = () => {
 			editor.setOption("lineNumbers", false);
 		}
 	});
+
+	return;
 };
 toggleLineNumbers();
 
@@ -109,11 +119,13 @@ const toggleShadow = () => {
 
 	shadowCheckBox.addEventListener("click", () => {
 		if (shadowCheckBox.checked === true) {
-			editor.classList.add("display-shadow");
+			editor.classList.add("active-shadow");
 		} else {
-			editor.classList.remove("display-shadow");
+			editor.classList.remove("active-shadow");
 		}
 	});
+
+	return;
 };
 toggleShadow();
 
@@ -132,27 +144,70 @@ const toggleHead = () => {
 			header.style.display = "none";
 		}
 	});
+
+	return;
 };
 toggleHead();
 
 /* 
 =================================
-	[function that toggles padding amount]
+	[toggles padding button styles]
 */
-const togglePadding = () => {
-	const snapWindow = document.querySelector(".snap-window");
-	const padBtn16 = document.querySelector(".pad-btn.pad-16");
-	const padBtn32 = document.querySelector(".pad-btn.pad-32");
-	const padBtn64 = document.querySelector(".pad-btn.pad-64");
 
-	padBtn16.addEventListener("click", () => {
-		snapWindow.classList.add("window-pad-16");
+// select all padding buttons
+const padBtns = document.querySelectorAll(".pad-btn");
+
+// padding button variables
+const btn16 = document.querySelector(".btn-16");
+const btn32 = document.querySelector(".btn-32");
+const btn64 = document.querySelector(".btn-64");
+
+// loop through all the padding buttons
+padBtns.forEach((clickedBtn) => {
+	// add onClick event listener
+	clickedBtn.addEventListener("click", () => {
+		// remove the active class from all buttons
+		padBtns.forEach((btn) => {
+			btn.classList.remove("active-pad-btn");
+		});
+
+		// add the active class to the clicked button
+		clickedBtn.classList.add("active-pad-btn");
+
+		// add/remove padding logic
+		// select the snap window
+		const snapWindow = document.querySelector(".snap-window");
+
+		// remove all padding function
+		// BUGGGG
+		const removePadding = () => {
+			snapWindow.classList.remove(
+				"active-pad-16",
+				"active-pad-32",
+				"active-pad-64"
+			);
+		};
+		removePadding();
+
+		// add 16px padding on click
+		btn16.addEventListener("click", (removePadding) => {
+			snapWindow.classList.add("active-pad-16");
+		});
+
+		// add 32px padding on click
+		btn32.addEventListener("click", (removePadding) => {
+			snapWindow.classList.add("active-pad-32");
+		});
+
+		// add 64px padding on click
+		btn64.addEventListener("click", (removePadding) => {
+			snapWindow.classList.add("active-pad-64");
+		});
 	});
-	padBtn32.addEventListener("click", () => {
-		snapWindow.classList.add("window-pad-32");
-	});
-	padBtn64.addEventListener("click", () => {
-		snapWindow.classList.add("window-pad-64");
-	});
-};
-togglePadding();
+});
+
+/* 
+=================================
+	[toggle snap window padding amount]
+*/
+// get the snap window styles

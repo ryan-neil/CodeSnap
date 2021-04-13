@@ -159,18 +159,18 @@ a {
 /* Snapshot window */
 .snap-window {
 	background-color: var(--color-primary);
-	outline: 1px dashed var(--border-color-snap);
+	outline: 2px dashed var(--border-color-snap);
 	height: auto;
 	border-radius: 5px;
-	padding: 64px;
 }
-.window-pad-16 {
+/* Active window padding */
+.active-pad-16 {
 	padding: 16px;
 }
-.window-pad-32 {
+.active-pad-32 {
 	padding: 32px;
 }
-.window-pad-64 {
+.active-pad-64 {
 	padding: 64px;
 }
 /* main code editor */
@@ -181,7 +181,7 @@ a {
 	border: 1px solid var(--color-textEditor-header);
 	border-radius: 5px;
 }
-.input-box-wrapper.display-shadow {
+.input-box-wrapper.active-shadow {
 	box-shadow: 0px 25px 20px -10px rgba(21, 22, 65, 0.3);
 }
 /* main code editor header */
@@ -242,7 +242,7 @@ Textarea Styles:
 }
 /* 
 =================================
-[Dark-Light Toggle]
+[Dark Mode Toggle]
 */
 .dark-mode-toggle {
 	fill: var(--text-color-heading);
@@ -363,7 +363,7 @@ Textarea Styles:
 	opacity: 1;
 }
 .vertical-line {
-	background-color: var(--text-color-subheading);
+	background-color: var(--text-color-btn);
 	width: 1px;
 	margin: 0 1rem;
 	height: 22px;
@@ -408,12 +408,13 @@ Textarea Styles:
 }
 .pad-btn:hover {
 	color: var(--text-color-heading);
-	opacity: 1;
+	opacity: .9;
 }
-.pad-btn-active {
+/* Active padding button */
+.pad-btn.active-pad-btn {
 	color: var(--text-color-heading);
-	font-weight: 500;
-	opacity: 1;
+	opacity: .9;
+	font-weight: 400;
 }
 
 /* 
