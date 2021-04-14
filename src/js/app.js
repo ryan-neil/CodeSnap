@@ -49,6 +49,31 @@ darkModeToggle.addEventListener("click", () => {
 
 /* 
 =================================
+	[Display Side Bar]
+*/
+
+/**
+ * on tab click -> side nav display = none
+ * if side nav display = none -> on tab click display = block
+ * **BUG** side nav gets stuck after 2 clicks.
+ */
+
+const sideNavBar = document.querySelector(".side-nav");
+const tabBtn = document.querySelector(".body-tab");
+
+tabBtn.addEventListener("click", () => {
+	getComputedStyle(sideNavBar).getPropertyValue("display");
+	sideNavBar.style.display = "none";
+
+	if ((sideNavBar.style.display = "none")) {
+		tabBtn.addEventListener("click", () => {
+			sideNavBar.style.display = "block";
+		});
+	}
+});
+
+/* 
+=================================
 	[CodeMirror]
 */
 const editor = CodeMirror.fromTextArea(
