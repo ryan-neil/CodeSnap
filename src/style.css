@@ -30,6 +30,7 @@ Colors
 	/* Styles */
 	--transition: 0.2s ease-in-out;
 	--card-color-bg: var(--color-primary-bg);
+	--pill-color-bg: #d8e0e7;
 	--border-color-select: #ccd4da;
 	--border-color-snap: #b0b6bb;
 	--border-color-nav: #d8e0e7;
@@ -69,6 +70,7 @@ Colors
 	--border-color-nav: #434a53;
 	--border-color-select: #434a53;
 	--border-color-snap: #b0b6bb;
+	--pill-color-bg: #434a53;
 	/* Typography */
 	--text-color-heading: #d7e2eb;
 	--text-color-subheading: #95a3af;
@@ -97,9 +99,16 @@ a {
 [Project]
 */
 .project-container {
-	width: 100%;
-	height: 100%;
+	width: 100vw;
+	height: 100vh;
 	display: flex;
+}
+
+.project-col1 {
+	flex: 4;
+}
+.project-col2 {
+	flex: 1;
 }
 /* 
 
@@ -117,12 +126,10 @@ a {
 [Navbar] Section
 */
 .navbar {
-	width: auto;
+	width: 100%;
 	height: auto;
-	padding-left: 3rem;
-	position: absolute;
-	top: 0;
-	left: 0;
+	padding: 0 3rem;
+	background-color: var(--color-primary-bg);
 }
 .navbar-container {
 	max-width: 73rem;
@@ -146,14 +153,16 @@ a {
 */
 #body {
 	background-color: var(--color-primary-bg);
+	height: 100%;
+	width: 100%;
 	display: flex;
 	align-items: center;
+	justify-content: center;
 }
 .body-container {
-	height: 100vh;
 	width: auto;
+	height: 100vh;
 	margin: auto;
-	padding: 4rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -441,6 +450,7 @@ Textarea Styles:
 	font-weight: 300;
 	background: none;
 	border: none;
+	padding: .2rem;
 	cursor: pointer;
 	opacity: .8;
 	transition: var(--transition);
@@ -454,6 +464,8 @@ Textarea Styles:
 	color: var(--text-color-heading);
 	opacity: .9;
 	font-weight: 400;
+	background-color: var(--pill-color-bg);
+	border-radius: .2rem;
 }
 
 /* 
