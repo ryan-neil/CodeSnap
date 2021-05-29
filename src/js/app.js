@@ -49,48 +49,18 @@ darkModeToggle.addEventListener("click", () => {
 
 /* 
 =================================
-	[Display Side Bar]
-*/
-
-/**
- * on tab click -> side nav display = none
- * if side nav display = none -> on tab click display = block
- * **BUG** NOT WORKING
- */
-
-const sideNavBar = document.querySelector(".side-nav");
-const tabBtn = document.querySelector(".body-tab");
-const sideNavDisplay = getComputedStyle(sideNavBar).getPropertyValue(
-	"display"
-);
-
-if (sideNavDisplay === "block") {
-	tabBtn.addEventListener("click", () => {
-		sideNavDisplay === "none";
-	});
-} else if (sideNavDisplay === "none") {
-	tabBtn.addEventListener("click", () => {
-		sideNavDisplay === "block";
-	});
-}
-
-/* 
-=================================
 	[CodeMirror]
 */
-const editor = CodeMirror.fromTextArea(
-	document.getElementById("text-editor"),
-	{
-		mode            : "javascript",
-		theme           : "material-palenight",
-		lineNumbers     : true,
-		tabSize         : 2,
-		lineWrapping    : true,
-		scrollbarStyle  : null,
-		matchBrackets   : true,
-		styleActiveLine : true
-	}
-);
+const editor = CodeMirror.fromTextArea(document.getElementById("text-editor"), {
+	mode            : "javascript",
+	theme           : "material-palenight",
+	lineNumbers     : true,
+	tabSize         : 2,
+	lineWrapping    : true,
+	scrollbarStyle  : null,
+	matchBrackets   : true,
+	styleActiveLine : true
+});
 
 /* 
 =================================

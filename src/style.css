@@ -99,16 +99,20 @@ a {
 [Project]
 */
 .project-container {
-	width: 100vw;
-	height: 100vh;
 	display: flex;
+	height: 100vh;
+	width: 100vw;
 }
 
 .project-col1 {
 	flex: 4;
+	height: 100%;
 }
 .project-col2 {
 	flex: 1;
+	height: 100%;
+
+	display: none;
 }
 /* 
 
@@ -117,7 +121,6 @@ a {
 [Main Body]
 */
 .main-body-container {
-	width: 100%;
 	height: 100%;
 }
 
@@ -152,41 +155,20 @@ a {
 [Body] Section
 */
 #body {
-	background-color: var(--color-primary-bg);
 	height: 100%;
-	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	background-color: var(--color-primary-bg);
 }
 .body-container {
-	width: auto;
-	height: 100vh;
+	height: 100%;
+	width: 100%;
 	margin: auto;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
-.body-tab {
-	background-color: var(--color-secondary-bg);
-	fill: var(--text-color-subheading);
-	cursor: pointer;
-	border-top: 1px solid var(--border-color-nav);
-	border-bottom: 1px solid var(--border-color-nav);
-	border-left: 1px solid var(--border-color-nav);
-	border-right: none;
-	padding: .5rem .2rem;
-	border-radius: 6px 0 0 6px;
-	display: flex;
-	align-items: center;
-}
-.body-tab__icon {
-	width: 1.4rem;
-}
 /* Snapshot window */
 .snap-window {
-	/* background-color: var(--color-primary); */
 	background-image: linear-gradient(
 		43deg,
 		#4158d0 0%,
@@ -264,8 +246,7 @@ Textarea Styles:
 .side-nav {
 	background-color: var(--color-secondary-bg);
 	border-left: 1px solid var(--border-color-nav);
-	width: auto;
-	height: 100vh;
+	height: 100%;
 	padding: 1rem 1.4rem;
 	box-shadow: var(--box-shadow-inset);
 
