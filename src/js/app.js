@@ -49,6 +49,35 @@ darkModeToggle.addEventListener("click", () => {
 
 /* 
 =================================
+	[function that displays side bar]
+		* BUG: Menu doesn't toggle on first click.
+*/
+const menuBtn = document.querySelector("#menu-btn");
+const menu = document.querySelector(".project-col2");
+
+menuBtn.addEventListener("click", toggleMenu);
+
+function toggleMenu() {
+	const showMenu = menu.style.display;
+	// "" represents default style (block)
+	if (showMenu === "") {
+		return closeMenu();
+	}
+	return openMenu();
+}
+
+// openMenu = () => (menu.style.display = "block");
+function openMenu() {
+	menu.style.display = ""; // "" represents default style (block)
+}
+
+// closeMenu = () => (menu.style.display = "none");
+function closeMenu() {
+	menu.style.display = "none";
+}
+
+/* 
+=================================
 	[CodeMirror]
 */
 const editor = CodeMirror.fromTextArea(document.getElementById("text-editor"), {
@@ -62,10 +91,7 @@ const editor = CodeMirror.fromTextArea(document.getElementById("text-editor"), {
 	styleActiveLine : true
 });
 
-/* 
-=================================
-	[starter code in the editor]
-*/
+// [starter code in the editor]
 const starterCode = editor
 	.getDoc()
 	.setValue(
@@ -149,6 +175,7 @@ toggleHead();
 /* 
 =================================
 	[toggle padding]
+		* Bug: Initial button click removes all padding without adding correct padding.
 */
 
 // select all padding buttons
@@ -170,8 +197,7 @@ padBtns.forEach((clickedBtn) => {
 		// select the snap window
 		const snapWindow = document.querySelector(".snap-window");
 
-		// remove all padding function
-		// **BUG** initial button click removes all padding without adding correct padding.
+		// remove all padding function (*BUG*)
 		const removePadding = () => {
 			snapWindow.classList.remove(
 				"active-pad-16",
@@ -201,4 +227,44 @@ padBtns.forEach((clickedBtn) => {
 			snapWindow.classList.add("active-pad-64");
 		});
 	});
+});
+
+/* 
+=================================
+	[Color Picker]
+*/
+const snapWindow = document.querySelector("#snapWindow");
+
+const pickr = Pickr.create({
+	el         : ".color-picker",
+	container  : ".side-nav",
+	theme      : "monolith",
+	showAlways : true,
+	inline     : true,
+	appClass   : "custom-class",
+
+	components : {
+		// Main components
+		preview     : true,
+		opacity     : true,
+		hue         : true,
+
+		// Input / output Options
+		interaction : {
+			hex   : true,
+			rgba  : true,
+			hsla  : false,
+			hsva  : false,
+			cmyk  : false,
+			input : true,
+			clear : false,
+			save  : false
+		}
+	}
+});
+
+// change the snap window background color on select
+pickr.on("change", (...args) => {
+	let color = args[0].toRGBA();
+	this.snapWindow.style.backgroundColor = `rgba(${color[0]},${color[1]},${color[2]},${color[3]})`;
 });
