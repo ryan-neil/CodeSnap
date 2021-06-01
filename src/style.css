@@ -8,7 +8,6 @@ Colors
 	--color-secondary-bg: #eff0f3;
 	--color-primary: #ffbd32;
 	--color-primary-light: #ffd271;
-	--color-secondary: ;
 	--white: #ffffff;
 	--color-primary-gradient: linear-gradient(
 		135deg,
@@ -18,7 +17,7 @@ Colors
 	/* Typography */
 	--text-color-heading: #3f4347;
 	--text-color-subheading: #545a5f;
-	--text-color-btn: #3f4347;
+	--text-color-btn: var(--text-color-heading);
 	--text-size-xsm: 0.750rem;
 	--text-size-sm: 0.875rem;
 	--text-size-base: 1rem;
