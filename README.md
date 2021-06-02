@@ -11,24 +11,32 @@ Users will be able to change the main background color of the site to whatever t
 A quick look at the files and directories you'll see in the repo.
 
 ```bash
-  .
-  ├── src
-    ├── assets
-      ├── repo image files
-    └── js
-      ├── components
-        ├── buttons
-        ├── editor
-        ├── navbar
-        ├── select-bars
-        ├── toggle
-      └── app.js
+└── src
+  ├── assets
+    ├── repo image files
+  ├── js
+    ├── components
+      ├── buttons
+      ├── editor
+        ├── lib
+          ├── editor.css
+          ├── editor.js
+      ├── navbar
+      ├── select-bars
+      ├── toggle
+    ├── app.js
+    ├── codemirror.js
+    ├── color-picker.js
+    ├── darkmode.js
+    ├── toggles.js
+  ├── index.html
+  ├── style.css
 ```
 
 1. **`/src`**: This directory contains all of the source files for the repo.
     1. **`/assets`**: This directory contains images for the repo.
-    1. **`/js`**: This directory contains all JavaScript in the repo.
-        1. **`/components`**: This directory contains all JavaScript files and components files.
+    1. **`/js`**: This directory contains all JavaScript files in the repo.
+        1. **`/components`**: This directory contains all JavaScript component files.
 
 ## ✅ Todo
 __Features:__

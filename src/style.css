@@ -219,6 +219,17 @@ a {
 	align-items: center;
 }
 /* Snapshot window */
+#canvas-wrap {
+	position: relative;
+	height: auto;
+	width: auto;
+}
+#canvas-wrap canvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
 .snap-window {
 	background-color: var(--color-primary);
 	outline: 2px dashed var(--border-color-snap);
@@ -403,7 +414,6 @@ Textarea Styles:
 	display: block;
 	border-bottom: 1px solid var(--border-color-nav);
 	padding: 12px 6px;
-	text-decoration: none;
 	opacity: 0.7;
 }
 .btn__icon-dropdown .dropdown-list a:hover {

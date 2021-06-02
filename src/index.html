@@ -59,27 +59,33 @@
 				<section id="body">
 					<div class="body-container">
 						<!-- Snap Window -->
-						<div id="snapWindow" class="snap-window active-pad-64">
-							<div class="input-box-wrapper active-shadow">
-								<!-- Code Editor Header -->
-								<div class="input-box__item header">
-									<!-- Dot 1 -->
-									<div class="input-item__dots red"></div>
-									<!-- Dot 2 -->
-									<div class="input-item__dots yellow"></div>
-									<!-- Dot 3 -->
-									<div class="input-item__dots green"></div>
-								</div>
-								<!-- Code Editor Input Field -->
-								<div class="input-box__item body">
-									<textarea name="text" id="text-editor"
-										onInput="this.parentNode.dataset.replicatedValue = this.value"></textarea>
+						<div id="canvas-wrap">
+							<canvas id="myCanvas"></canvas>
+							<div id="snapWindow" class="snap-window active-pad-64">
+								<div class="input-box-wrapper active-shadow">
+									<!-- Code Editor Header -->
+									<div class="input-box__item header">
+										<!-- Dot 1 -->
+										<div class="input-item__dots red"></div>
+										<!-- Dot 2 -->
+										<div class="input-item__dots yellow"></div>
+										<!-- Dot 3 -->
+										<div class="input-item__dots green"></div>
+									</div>
+									<!-- Code Editor Input Field -->
+									<div class="input-box__item body">
+										<textarea name="text" id="text-editor"
+											onInput="this.parentNode.dataset.replicatedValue = this.value"></textarea>
+									</div>
 								</div>
 							</div>
 						</div>
+						<!-- Image Converted for Javascript -->
+						<img src="" id="imgConverted">
+
 						<!-- CTA Button -->
 						<div class="btn cta">
-							<button class="btn__text">Export</button>
+							<button type="button" id="btnDownloadPNG" class="btn__text">Export</button>
 							<div class="vertical-line"></div>
 							<button class="btn__icon-dropdown">
 								<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
@@ -99,8 +105,18 @@
 									</g>
 								</svg>
 								<ul class="dropdown-list">
-									<li><a href="#">svg</a></li>
+									<li><a href="#">jpeg</a></li>
 									<li><a href="#">png</a></li>
+									<!-- <li>
+										<button type="button" id="btnDownloadJPEG">
+											jpeg
+										</button>
+									</li>
+									<li>
+										<button type="button" id="btnDownloadPNG">
+											png
+										</button>
+									</li> -->
 								</ul>
 							</button>
 						</div>
@@ -288,12 +304,19 @@
 		</div>
 
 	</div>
+
 	<!-- [JS] -->
 	<script src="js/app.js" defer></script>
+	<!-- [CodeMirror] -->
 	<script src="js/components/editor/lib/editor.js"></script>
-	<!-- [CodeMirror Language] -->
 	<script src="js/components/editor/mode/javascript/javascript.js"></script>
+	<script src="js/codemirror.js"></script>
+	<!-- [Color Picker] -->
 	<script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
+	<script src="js/color-picker.js"></script>
+	<script src="js/download.js"></script>
+	<script src="js/darkmode.js"></script>
+	<script src="js/toggles.js"></script>
 </body>
 
 </html>
