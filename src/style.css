@@ -231,6 +231,7 @@ a {
 	z-index: 0;
 }
 .snap-window {
+	/* background-image: var(--color-gradient-1); */
 	background-color: var(--color-primary);
 	outline: 2px dashed var(--border-color-snap);
 	height: auto;

@@ -7,76 +7,89 @@ CodeSnap is a web application that allows users to add snippets of code inside a
 
 Users will be able to change the main background color of the site to whatever they want. A future update will allow users to select different themes of code text.
 
-## 🧐 What's inside?
+<br>
+
+<p align="left">
+  <img src="assets/codesnap-screenshot.png" width="80%">
+</p>
+
+<br>
+
+### 🧐 What's inside?
 A quick look at the files and directories you'll see in the repo.
 
 ```bash
-└── src
-  ├── assets
-    ├── repo image files
-  ├── js
-    ├── components
-      ├── buttons
-      ├── editor
-        ├── lib
-          ├── editor.css
-          ├── editor.js
-      ├── navbar
-      ├── select-bars
-      ├── toggle
-    ├── app.js
-    ├── codemirror.js
-    ├── color-picker.js
-    ├── darkmode.js
-    ├── toggles.js
-  ├── index.html
-  ├── style.css
+├─ src
+│ ├─ assets
+│ │ └─ repo image files
+│ ├─ js
+│ │ ├─ components
+│ │ ├─ app.js
+│ │ ├─ codemirror.js
+│ │ ├─ color-picker.js
+│ │ ├─ darkmode.js
+│ │ └─ toggles.js
+│ ├─ index.html
+│ ├─ style.css
+│ └─ README.md
 ```
 
-1. **`/src`**: This directory contains all of the source files for the repo.
-    1. **`/assets`**: This directory contains images for the repo.
-    1. **`/js`**: This directory contains all JavaScript files in the repo.
-        1. **`/components`**: This directory contains all JavaScript component files.
+----
 
-## ✅ Todo
-__Features:__
+### 📌 App Features
+1. Screenshot code snippets
+2. Customize background color
+3. Toggle editor styles (header, box-shadow, margins, etc)
+4. Share snippets to social media platforms
+5. Dark and light theme support
+
+----
+
+### 🚘 Road Map
 - [x] Implement CodeMirror.
-- [x] Toggle CodeSnap editor styles.
+- [x] Toggle editor styles.
     - [x] Box shadow toggle.
     - [x] Line numbering toggle.
     - [x] Header toggle.
     - [ ] Language tag toggle.
-- [ ] Export to svg and png button.
-- [ ] Customize background color.
+- [x] Customize background color.
+- [ ] Export to jpg and png button.
 - [ ] Custom CodeSnap editor themes.
 - [ ] Copy code button in text editor.
+- [ ] Share to social platforms button (Twitter, Instagram, etc).
+- [ ] Profile page.
 - [ ] Customize font families.
-- [ ] Profile page.
+- [ ] More functionality (tab sizing, font styles, font sizing, etc).
 
-__Design/Build:__
-- [x] Add side nav bar with functionality.
-- [ ] Side navbar functions:
-    - [x] Export CTA button - "Export" exports to png. Icon activates dropdown list of png and svg (Stripe dropdown effect).
-    - [x] Theme select bar.
-    - [x] Language select bar.
-    - [x] Styles toggles.
-        - [ ] Display images under toggles showing what they do.
-    - [ ] Background color picker.
-    - [ ] Share code (Twitter, Instagram, etc.)
-- [ ] Add language tag (js, css, etc.) to CodeSnap editor.
-- [ ] On CodeSnap editor hover, pin icon (outline) displays. Pin to your collection. If pinned, icon displays filled.
-- [ ] Profile page.
-    - [ ] "Your Collections" tab.
+----
 
-__Road-map:__
-- [ ] Implement social aspect to app.
-- [ ] Users can comment on other users' code snippet and make edits/suggestions.
-    - [ ] Edits and suggestions can be done right in the editor. Once "submitted" original snippet is unchanged but a snapshot of the suggested editor is posted in the comments along with a description (Slack style).
-- [ ] Allow users to save other users' code snippets.
-- [ ] Share code snippets between users and social media accounts.
-- [ ] More functionality (tab sizing, font styles, font sizing, etc.).
+### ⚒️ Built With
+* HTML
+* CSS
+* JavaScript
 
-## 🔗 Project Resources
+----
+
+### 💭 Thoughts
+1. Social aspect to the app:
+    * Allow users to save other users' code snippets.
+    * Users can comment on other users' code snippet and make edits/suggestions.
+        * Edits and suggestions can be done right in the editor. Once "submitted" original snippet is unchanged but a snapshot of the suggested editor is posted in the comments along with a description (Slack style).
+    * On editor hover, pin icon (outline) displays
+        * Pin to your collection
+        * If pinned, icon displays filled
+    * Profile page
+        * "Your Collections" tab
+    * Share code snippets between users and social media accounts.
+
+----
+
+### 🍄 Inspiration
+[draftbit.com](https://draftbit.com/)
+
+----
+
+### 🔗 Project Resources
 CodeMirror:
 * [CodeMirror User Manual](https://codemirror.net/doc/manual.html)
 * [CodeMirror Setup Guide](https://www.youtube.com/watch?v=o1DDWQDBT9Y)
@@ -102,3 +115,13 @@ highlight.js:
 Creating a Syntax Highlighter:
 * [MDN Syntax Highlighter](https://developer.mozilla.org/en-US/docs/MDN/Editor/Syntax_highlighting)
 * [W3 Syntax Highlighter](https://www.w3schools.com/howto/howto_syntax_highlight.asp)
+
+----
+
+### Contributing
+Contributions are always welcome! All I ask is that you open an issue and we discuss your proposed changes before you create a pull request.
+
+----
+
+### License
+CodeSnap is [MIT licensed](#)
