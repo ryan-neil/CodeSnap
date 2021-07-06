@@ -1,0 +1,28 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 500;
+}
+a {
+	text-decoration: none;
+}
+/* 
+=================================
+[Icons]
+*/
+.icons {
+	fill: var(--text-color-heading);
+	background: transparent;
+	cursor: pointer;
+	padding: .2rem;
+	border: none;
+	border-radius: .2rem;
+}
+.icons:hover {
+	background-color: var(--pill-color-bg);
+	transition: var(--transition);
+}

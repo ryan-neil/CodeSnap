@@ -50,11 +50,7 @@ Colors
 	--toggle-color-on: #4ade80;
 	--toggle-color-off: #f87171;
 	/* Button */
-	--color-btn-cta: linear-gradient(
-		180deg,
-		#ffcb5c 10%,
-		var(--color-primary) 45%
-	);
+	--color-btn-cta: linear-gradient(180deg, #ffcb5c 10%, var(--color-primary) 45%);
 	/* Select Dropdown */
 	--color-btn-select: linear-gradient(
 		180deg,
@@ -91,34 +87,6 @@ Colors
 	);
 }
 
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-html {
-	font-family: 'Quicksand', sans-serif;
-	font-weight: 500;
-}
-a {
-	text-decoration: none;
-}
-/* 
-=================================
-[Icons]
-*/
-.icons {
-	fill: var(--text-color-heading);
-	background: transparent;
-	cursor: pointer;
-	padding: .2rem;
-	border: none;
-	border-radius: .2rem;
-}
-.icons:hover {
-	background-color: var(--pill-color-bg);
-	transition: var(--transition);
-}
 /* 
 =================================
 [Menu Toggle]
@@ -174,7 +142,7 @@ a {
 [Main Body]
 */
 .main-body-container {
-	height: 100%;
+	height: auto;
 }
 
 /* 
@@ -216,6 +184,7 @@ a {
 	padding-top: 4rem;
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	align-items: center;
 }
 /* Snapshot window */
@@ -304,7 +273,7 @@ Textarea Styles:
 .side-nav {
 	background-color: var(--color-secondary-bg);
 	border-left: 1px solid var(--border-color-nav);
-	height: 100%;
+	height: auto;
 	padding: 1rem;
 	box-shadow: var(--box-shadow-inset);
 	overflow: scroll;

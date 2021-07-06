@@ -1,7 +1,6 @@
 /* 
 =================================
 	[function that displays side bar]
-		* BUG: Menu doesn't toggle on first click.
 */
 const menuBtn = document.querySelector("#menu-btn");
 const menu = document.querySelector(".project-col2");
@@ -20,9 +19,11 @@ function toggleMenu() {
 // openMenu = () => (menu.style.display = "block");
 function openMenu() {
 	menu.style.display = ""; // "" represents default style (block)
+	return;
 }
 
 // closeMenu = () => (menu.style.display = "none");
 function closeMenu() {
 	menu.style.display = "none";
+	return;
 }

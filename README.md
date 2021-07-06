@@ -33,6 +33,15 @@ A quick look at the files and directories you'll see in the repo.
 │ ├─ style.css
 │ └─ README.md
 ```
+----
+
+### 🚨 Current Feature / Issues
+`#1` - Change gradient color on click pre-made buttons.\
+`#2` - Body and sidebar height issue.\
+`#3` - Side color selector show same color as snapWindow on start.\
+`#4` - Add external dropdown styling library.\
+`#5` - Build theme selector dropdown.\
+`#6` - Build language selector dropdown.
 
 ----
 
@@ -102,6 +111,9 @@ Color Picker:
 * [Color Picker Tutorial 1](https://www.youtube.com/watch?v=RSbZJYVQmPU)
 * [Color Picker Tutorial 2](https://www.youtube.com/watch?v=DP9-CVgkgDA)
 * [Input Type Color Tutorial](https://www.youtube.com/watch?v=eIw-Nou9L9E)
+
+HTML to Image:
+* [html-to-image](https://github.com/bubkoo/html-to-image)
 
 Misc:
 * [Color is Math](https://dev.to/madsstoumann/colors-are-math-how-they-match-and-how-to-build-a-color-picker-4ei8)
